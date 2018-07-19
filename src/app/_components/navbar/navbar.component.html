@@ -1,6 +1,10 @@
 <mat-toolbar [class.mat-elevation-z4]="scrollTop > 0">
 
-    <button mat-icon-button *ngIf="!mobileQuery.matches" [matMenuTriggerFor]="MoMenu" class="white-theme">
+    <!-- <button mat-icon-button *ngIf="!mobileQuery.matches" [matMenuTriggerFor]="MoMenu" class="white-theme">
+        <mat-icon color="primary">menu</mat-icon>
+    </button> -->
+
+    <button mat-icon-button *ngIf="!mobileQuery.matches" class="white-theme" (click)="_uvfService.sidenav.open()">
         <mat-icon color="primary">menu</mat-icon>
     </button>
 
@@ -37,7 +41,7 @@
 </mat-toolbar>
 
 <!-- mat-menus -->
-<mat-menu #MoMenu="matMenu" [overlapTrigger]="true">
+<!-- <mat-menu #MoMenu="matMenu" [overlapTrigger]="true">
     <a mat-menu-item routerLink="inicio" routerLinkActive="active">Inicio</a>
     <a mat-menu-item routerLink="univafu" routerLinkActive="active">UNIVAFU</a>
     <a mat-menu-item [matMenuTriggerFor]="MoOE">Oferta Educativa</a>
@@ -73,4 +77,4 @@
     <a mat-menu-item routerLink="red-univafu/iridh" routerLinkActive="active">IRIDH</a>
     <a mat-menu-item routerLink="red-univafu/innovagain" routerLinkActive="active">Innovagain</a>
     <a mat-menu-item style="padding-right: 79px;" (click)="onAlgebraix()">Algebraix</a>
-</mat-menu>
+</mat-menu> -->

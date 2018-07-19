@@ -13,19 +13,12 @@ import {
     MatCardModule,
     MatDialogModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSidenavModule
 } from '@angular/material';
 import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
-// import { NoticiasDialogComponent } from '../_dialogs/noticias-dialog/noticias-dialog.component';
-// import { CarouselDirective } from '../_directives/carousel.directive';
-// import { AlgebraixDialogComponent } from '../_dialogs/algebraix-dialog/algebraix-dialog.component';
 
 @NgModule({
-    // declarations: [
-    //     NoticiasDialogComponent,
-    //     AlgebraixDialogComponent,
-    //     CarouselDirective
-    // ],
     imports: [
         MatButtonModule,
         MatToolbarModule,
@@ -41,7 +34,8 @@ import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
         MatDialogModule,
         MatCheckboxModule,
         LayoutModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatSidenavModule
     ],
     exports: [
         MatButtonModule,
@@ -58,14 +52,10 @@ import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
         MatDialogModule,
         MatCheckboxModule,
         LayoutModule,
-        MatProgressSpinnerModule
-        // CarouselDirective
+        MatProgressSpinnerModule,
+        MatSidenavModule
     ],
-    providers: [],
-    // entryComponents: [
-    //     NoticiasDialogComponent,
-    //     AlgebraixDialogComponent
-    // ]
+    providers: []
 })
 
 export class MaterialComponentsModule { }

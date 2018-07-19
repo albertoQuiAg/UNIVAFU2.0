@@ -4,6 +4,7 @@ import { MatToolbar } from '../../../../node_modules/@angular/material';
 import { fromEvent, Subscription } from '../../../../node_modules/rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '../../../../node_modules/@angular/router';
+import { UvfService } from '../../_services/uvf.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,7 +20,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   _mobileQueryListener: () => void;
 
-  constructor(_changeDetectorRef: ChangeDetectorRef, _media: MediaMatcher, private _renderer: Renderer2, private _route: Router) { 
+  constructor(
+    _changeDetectorRef: ChangeDetectorRef, 
+    _media: MediaMatcher, 
+    private _renderer: Renderer2, 
+    private _route: Router,
+    public _uvfService: UvfService
+  ) { 
     this.mobileQuery = _media.matchMedia('(min-width: 900px)');
     this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
