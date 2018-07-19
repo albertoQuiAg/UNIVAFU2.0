@@ -1,0 +1,26 @@
+.navbar-space {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    position: fixed;
+    z-index: 999;
+    background: transparent;
+}
+
+.navbar-logo {
+    width: auto;
+    height: 1.2em;
+}
+
+.animate-navbar {
+    transition: background-color .6s, box-shadow .6s;
+}
+
+.dark-navbar {
+    background: rgba(0, 0, 0);
+}
+
+.prueba {
+    background-color: black;
+}

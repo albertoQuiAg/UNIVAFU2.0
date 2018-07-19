@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+body, html {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', 'Roboto', sans-serif;
+}
+
+.line {
+    border-bottom: 10px solid #D98A1B;
+    width: 80px;
+    /* margin: auto; */
+}
+
+.gwb-container {
+    padding: 16px;
+    background: #3d95d4;
+    color: #fff;
+    margin: 16px 0;
+}
+
+.gwb-line {
+    border-bottom-color: #fff;
+    margin: auto;
+}
+
+.gwb-box1-title {
+    text-align: center;
+}
