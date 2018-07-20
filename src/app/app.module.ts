@@ -9,12 +9,14 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
 import { RoutingModule } from './_app-modules/routing.module';
 import { UvfService } from './_services/uvf.service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialog/algebraix-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    AlgebraixDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,9 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   ],
   providers: [
     UvfService
+  ],
+  entryComponents: [
+    AlgebraixDialogComponent
   ],
   bootstrap: [AppComponent]
 })

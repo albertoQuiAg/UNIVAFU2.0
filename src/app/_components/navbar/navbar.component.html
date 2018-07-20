@@ -1,9 +1,5 @@
 <mat-toolbar [class.mat-elevation-z4]="scrollTop > 0">
 
-    <!-- <button mat-icon-button *ngIf="!mobileQuery.matches" [matMenuTriggerFor]="MoMenu" class="white-theme">
-        <mat-icon color="primary">menu</mat-icon>
-    </button> -->
-
     <button mat-icon-button *ngIf="!mobileQuery.matches" class="white-theme" (click)="_uvfService.sidenav.open()">
         <mat-icon color="primary">menu</mat-icon>
     </button>
@@ -12,58 +8,38 @@
 
     <img class="navbar-logo" src="http://univafu.edu.mx/assetsWebsite/logos/univafu_blanco.png" alt="UNIVAFU">
 
-    <!--
-  <span class="navbar-space" *ngIf="showNavBar"></span>
+    
+    <span class="navbar-space" *ngIf="mobileQuery.matches"></span>
 
-  <nav mat-tab-nav-bar *ngIf="showNavBar">
-      <a mat-tab-link
-          *ngFor="let link of navLinks"
-          [routerLink]="link.path"
-          routerLinkActive #rla="routerLinkActive"
-          [active]="rla.isActive">
-          {{link.label}}
-      </a>
-      <a mat-tab-link [active]="OEInkBarActive" [matMenuTriggerFor]="OEMenu" (onMenuOpen)="onOEMenuOpen('OE')" (onMenuClose)="onOEMenuClose('OE')">Oferta Educativa
-          <mat-icon [@animateNavArrows]="naOEState">expand_more</mat-icon>
-      </a>
-      <a mat-tab-link [active]="RUInkBarActive" [matMenuTriggerFor]="RedMenu" (onMenuOpen)="onOEMenuOpen('R')" (onMenuClose)="onOEMenuClose('R')">Red UNIVAFU
-          <mat-icon [@animateNavArrows]="naRedState">expand_more</mat-icon>
-      </a>
-      <a mat-tab-link
-          *ngFor="let link of navLinks2"
-          [routerLink]="link.path"
-          routerLinkActive #rla="routerLinkActive"
-          [active]="rla.isActive">
-          {{link.label}}
-      </a>
-  </nav> -->
+    <nav mat-tab-nav-bar *ngIf="mobileQuery.matches" color="accent">
+
+        <a mat-tab-link
+            *ngFor="let link of navLinks"
+            [routerLink]="link.path"
+            routerLinkActive #rla="routerLinkActive"
+            [active]="rla.isActive">
+            {{link.label}}
+        </a>
+
+        <!-- <a mat-tab-link [active]="OEInkBarActive" [matMenuTriggerFor]="OEMenu" (onMenuOpen)="onOEMenuOpen('OE')" 
+            (onMenuClose)="onOEMenuClose('OE')">Oferta Educativa
+            <mat-icon [@animateNavArrows]="naOEState">expand_more</mat-icon>
+        </a> -->
+        <!-- <a mat-tab-link [active]="RUInkBarActive" [matMenuTriggerFor]="RedMenu" (onMenuOpen)="onOEMenuOpen('R')" 
+            (onMenuClose)="onOEMenuClose('R')">Red UNIVAFU
+            <mat-icon [@animateNavArrows]="naRedState">expand_more</mat-icon>
+        </a> -->
+        <a mat-tab-link
+            routerLink="contacto"
+            routerLinkActive #rla="routerLinkActive"
+            [active]="rla.isActive">
+            Contacto
+        </a>
+    </nav> 
         
 </mat-toolbar>
 
 <!-- mat-menus -->
-<!-- <mat-menu #MoMenu="matMenu" [overlapTrigger]="true">
-    <a mat-menu-item routerLink="inicio" routerLinkActive="active">Inicio</a>
-    <a mat-menu-item routerLink="univafu" routerLinkActive="active">UNIVAFU</a>
-    <a mat-menu-item [matMenuTriggerFor]="MoOE">Oferta Educativa</a>
-    <a mat-menu-item [matMenuTriggerFor]="MoRed">Red UNIVAFU</a>
-    <a mat-menu-item routerLink="contacto" routerLinkActive="active">Contacto</a>
-</mat-menu>
-
-<mat-menu #MoOE="matMenu">
-    <a mat-menu-item routerLink="oferta-educativa/licenciaturas" routerLinkActive="active">Licenciaturas</a>
-    <a mat-menu-item routerLink="oferta-educativa/posgrados" routerLinkActive="active">Posgrados</a>
-    <a mat-menu-item routerLink="oferta-educativa/educacion-continua" routerLinkActive="active">Educación Continua</a>
-    <a mat-menu-item href="https://c1-univafu.algebraix.com/bin/g/enrollments/default/" target="blank" >Inscripciones en línea</a>
-</mat-menu>
-
-<mat-menu #MoRed="matMenu">
-    <a mat-menu-item routerLink="red-univafu/iiu" routerLinkActive="active">IIU</a>
-    <a mat-menu-item routerLink="red-univafu/fundacion" routerLinkActive="active">Fundación</a>
-    <a mat-menu-item routerLink="red-univafu/iridh" routerLinkActive="active">IRIDH</a>
-    <a mat-menu-item routerLink="red-univafu/innovagain" routerLinkActive="active">Innovagain</a>
-    <a mat-menu-item (click)="onAlgebraix()">Algebraix</a>
-</mat-menu>
-
 <mat-menu #OEMenu="matMenu">
     <a mat-menu-item routerLink="oferta-educativa/licenciaturas" routerLinkActive="active">Licenciaturas</a>
     <a mat-menu-item routerLink="oferta-educativa/posgrados" routerLinkActive="active">Posgrados</a>
@@ -77,4 +53,4 @@
     <a mat-menu-item routerLink="red-univafu/iridh" routerLinkActive="active">IRIDH</a>
     <a mat-menu-item routerLink="red-univafu/innovagain" routerLinkActive="active">Innovagain</a>
     <a mat-menu-item style="padding-right: 79px;" (click)="onAlgebraix()">Algebraix</a>
-</mat-menu> -->
+</mat-menu> 

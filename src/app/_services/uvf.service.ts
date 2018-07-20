@@ -10,6 +10,7 @@ export class UvfService {
 
   public noticiasData: any;;
   public sidenav: MatSidenav;
+  public OEInkBarActive: boolean = false;
 
   constructor(public _http: HttpClient) { }
 
@@ -19,6 +20,10 @@ export class UvfService {
 
   public setNavside(sidenav: MatSidenav) {
     this.sidenav = sidenav;
+  }
+
+  setOEInkBar(state: boolean) {
+    this.OEInkBarActive = state;
   }
 
 }

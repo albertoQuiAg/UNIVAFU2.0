@@ -41,6 +41,13 @@
     color: #fff;
 }
 
+.oec-line2 {
+    border-bottom-color: #fff;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.4s, opacity 0.8s;
+}
+
 /* .oferta-educativa-wrapper {
     padding: 16px;
 } */
@@ -58,6 +65,9 @@
     width: 100%;
     display: block;
     background-color: #3d95d4;
+    max-height: 16em;
+    object-fit: cover;
+    transition: filter .3s;
 }
 
 .oec-flex {
@@ -68,6 +78,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    transition: transform .3s;
 }
 
 .white-stroked-button {
@@ -93,6 +105,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.5s;
+}
+
+.serv-descs > p {
+    transition: color 0.5s;
+}
+
+.serv-animate-descs {
+    background-color: #3d95d4;
 }
 
 /*noticias*/
@@ -119,6 +140,7 @@
 .my-card {
     margin: 8px 16px;
     min-width: 240px;
+    max-width: 428px;
 }
 
 .card-img-opts {
@@ -133,4 +155,129 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+@media only screen and (min-width: 600px) { 
+    .oec {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .noticias-posts {
+        padding-bottom: 60px;
+    }
+}
+
+@media only screen and (min-width: 700px) { 
+    .video-wrapper {
+        align-items: flex-start;
+    }
+
+    .sentido-container {
+        width: 550px;
+    }
+    
+    .oec-info-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .oec-box1, .oec-box2 {
+        width: 100%;
+        position: relative;
+    }
+
+    .oec-box1 > h1 {
+        text-align: right;
+        margin: 0.67em;
+    }
+
+    .oec-line {
+        position: absolute;
+        right: 28px;
+    }
+
+    .oec-info-wrapper {
+        padding: 30px;
+    }
+
+    .noticias-header > h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width: 900px) { 
+    .sentido-container {
+        padding: 40px;
+    }
+
+    .sentido-container > h1 {
+        font-size: 3em;
+    }
+
+    .sentido-container > p {
+        font-size: 1.3em;
+    }
+
+    .oec-img {
+        max-height: 24em;
+    }
+
+    .oec-info-wrapper {
+        padding: 60px;
+    }
+
+    .oec-box1 > h1 {
+        font-size: 3em;
+    }
+
+    .oec-box2 > p {
+        font-size: 1.3em;
+    }
+
+    .oec-line {
+        right: 40px;
+    }
+
+    .serv-img {
+        height: 30em;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform 0.2s;
+    }
+
+    .serv-iiu {
+        background-image: url("http://univafu.edu.mx/assetsWebsite/images/home/index_iiu.jpg");
+    }
+
+    .serv-fundacion {
+        background-image: url("http://univafu.edu.mx/assetsWebsite/images/home/index_fundacion.jpg");
+    }
+    
+    .serv-innovagain {
+        background-image: url("http://univafu.edu.mx/assetsWebsite/images/home/index_innovagain.jpg");
+    }
+    
+    .serv-iridh {
+        background-image: url("http://univafu.edu.mx/assetsWebsite/images/home/index_iridh.jpg");
+    }
+
+    .serv-flex-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .serv-descs {
+        width: 100%;
+        padding: 0;
+    }
+
+    .serv-flex-wrapper  p {
+        font-size: 1.3em;
+        margin: 2.2em;
+    }
 }

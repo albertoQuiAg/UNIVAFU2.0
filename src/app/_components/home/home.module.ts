@@ -6,7 +6,6 @@ import { HomeComponent } from './home.component';
 import { MaterialComponentsModule } from '../../_app-modules/material-components.module';
 import { NoticiasDialogComponent } from '../_dialogs/noticias-dialog/noticias-dialog.component';
 import { CarouselDirective } from '../../_directives/carousel.directive';
-import { FooterComponent } from '../footer/footer.component';
 
 @NgModule({
   imports: [
@@ -17,8 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
   declarations: [
     HomeComponent,
     NoticiasDialogComponent,
-    CarouselDirective,
-    FooterComponent
+    CarouselDirective
   ],
   entryComponents: [
     NoticiasDialogComponent

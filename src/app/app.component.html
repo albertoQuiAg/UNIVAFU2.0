@@ -27,7 +27,7 @@
                         <mat-list-item *ngFor="let lvl2 of link.lvl2">
                             <a *ngIf="!lvl2.website && !lvl2.clickeable" matLine [routerLink]="lvl2.url" routerLinkActive="active" class="list-item-a lvl2-margin" 
                                 (click)="sidenav.close()">{{lvl2.label}}</a>
-                            <a *ngIf="lvl2.website" matLine class="list-item-a lvl2-margin" [href]="lvl2.url" target="blank">{{lvl2.label}}</a>
+                            <a *ngIf="lvl2.website" matLine class="list-item-a lvl2-margin" [href]="lvl2.url" target="blank" (click)="sidenav.close()">{{lvl2.label}}</a>
                             <a *ngIf="lvl2.clickeable" matLine class="list-item-a lvl2-margin" (click)="onAlgebraix()">{{lvl2.label}}</a>
                         </mat-list-item>
                     </div>

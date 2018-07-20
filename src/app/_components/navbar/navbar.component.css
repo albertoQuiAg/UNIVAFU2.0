@@ -24,3 +24,8 @@
 .prueba {
     background-color: black;
 }
+
+.mat-tab-link {
+    opacity: 0.9;
+    color: #fff;
+}

@@ -114,3 +114,9 @@ $uvf-theme: mat-light-theme($uvf-primary, $uvf-accent);
     @include angular-material-theme($white-theme);
 
 }
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Lato, Roboto'
+);
+
+@include angular-material-typography($custom-typography);

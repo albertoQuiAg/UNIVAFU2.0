@@ -17,8 +17,12 @@ import {
     MatSidenavModule
 } from '@angular/material';
 import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
+import { FooterComponent } from '../_components/footer/footer.component';
 
 @NgModule({
+    declarations: [
+        FooterComponent
+    ],
     imports: [
         MatButtonModule,
         MatToolbarModule,
@@ -53,7 +57,8 @@ import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
         MatCheckboxModule,
         LayoutModule,
         MatProgressSpinnerModule,
-        MatSidenavModule
+        MatSidenavModule,
+        FooterComponent
     ],
     providers: []
 })

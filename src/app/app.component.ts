@@ -1,6 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { MatSidenav } from '../../node_modules/@angular/material';
+import { MatSidenav, MatDialog } from '../../node_modules/@angular/material';
 import { UvfService } from './_services/uvf.service';
+import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialog/algebraix-dialog.component';
 
 @Component({
   selector: 'app-univafu',
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
     lvl2: any
   }>;
 
-  constructor(public _uvfService: UvfService) {
+  constructor(public _uvfService: UvfService, private dialog: MatDialog) {
 
     this.mobileLinks = [
       { label: 'Inicio', url: "", expandIconId: null, lvl2id: null, lvl2: null },
@@ -79,7 +80,9 @@ export class AppComponent implements OnInit {
   }
 
   onAlgebraix() {
-    console.log('weon');
+    this.sidenav.close().then(() => {
+      this.dialog.open(AlgebraixDialogComponent);
+    });
   }
 
 }

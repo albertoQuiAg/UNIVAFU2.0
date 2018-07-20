@@ -20,6 +20,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   _mobileQueryListener: () => void;
 
+  public navLinks:any = [
+    { "path" : "", "label" : "Inicio" },
+    { "path" : "univafu", "label" : "UNIVAFU" }
+  ];
+
+
   constructor(
     _changeDetectorRef: ChangeDetectorRef, 
     _media: MediaMatcher, 
