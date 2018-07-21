@@ -21,8 +21,12 @@
     background-size: cover;
     width: 50px;
     height: 50px;
-    transition: transform .4s;
+    transition: transform .2s ease-in-out;
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.social-buttons:hover {
+    transform: scale(1.4)
 }
 
 .fb-button-blue {
@@ -47,9 +51,12 @@
     width: 100%;
     display: block;
     filter: brightness(50%);
+    max-height: 24em;
+    object-fit: cover;
 }
 
 .white-stroked-button {
+    font-size: 1.1em;
     border-width: 2px;
     border-radius: 18px;
     display: block;
@@ -127,4 +134,64 @@
 
 .aviso-privacidad:hover {
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 700px) { 
+    .wrapper-info {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .social-box {
+        width: 330px;
+    }
+
+    .social-box > h2 {
+        margin-top: 0;
+    }
+
+    .info-box p {
+        font-size: 1.3em;
+    }
+
+    .vnr-wrapper {
+        background-color: #fff;
+        width: 64%;
+        position: relative;
+        margin-bottom: -92px;
+        padding: 40px;
+        z-index: 1;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    }
+
+    .vnr-wrapper a {
+        height: 60px;
+        width: 60px;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (min-width: 900px) { 
+
+    .contactanos-img {
+        max-height: 32em;
+    }
+
+    .contactanos-info > h1 {
+        font-size: 3em;
+    }
+
+    .vnr-wrapper >h1 {
+        font-size: 3em;
+    }
+
 }

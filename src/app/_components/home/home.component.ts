@@ -4,6 +4,7 @@ import { MediaMatcher } from '../../../../node_modules/@angular/cdk/layout';
 import { take, map, filter } from '../../../../node_modules/rxjs/operators';
 import { MatDialog } from '../../../../node_modules/@angular/material';
 import { NoticiasDialogComponent } from '../_dialogs/noticias-dialog/noticias-dialog.component';
+import { Subscription, fromEvent } from '../../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   _mobileQueryListener: () => void;
   noticias: any;
+  resizeSub: Subscription;
 
   constructor(
     _changeDetectorRef: ChangeDetectorRef,
@@ -31,10 +33,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.loadNoticias();
+    this.setResizeEvent();
   }
 
   ngOnDestroy() {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.resizeSub.unsubscribe();
   }
 
   loadNoticias() {
@@ -110,6 +114,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.render.removeClass(el.children[0], 'serv-animate-descs');
       this.render.setStyle(el.children[0].children[1], 'color', '#000');
     }
+  }
+
+  setResizeEvent() {
+    this.resizeSub = fromEvent(window, 'resize')
+      .pipe(
+        map((event:any) => ({
+          innerWidth: event.target.innerWidth
+        }))
+      ).subscribe((resize:any) => {
+        this.dialog.closeAll();
+      });
   }
 
 }

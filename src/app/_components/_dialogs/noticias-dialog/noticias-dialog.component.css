@@ -79,7 +79,8 @@
 }
   
 .parallaxImg {
-    height: auto;
+    object-fit: contain;
+    max-height:  28em;
     width: 100%;
     cursor: move;
 }
