@@ -40,6 +40,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.setScrollEvent();
+    this._uvfService.setToolbar(this.toolbar);
   }
 
   ngOnDestroy() {
@@ -60,9 +61,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
           this._renderer.addClass(this.toolbar._elementRef.nativeElement, 'dark-navbar');
           this._renderer.addClass(this.toolbar._elementRef.nativeElement, 'animate-navbar');
         } else {
-          if (this._route.url !== "/aviso-legal") {
-            this._renderer.removeClass(this.toolbar._elementRef.nativeElement, 'dark-navbar');
-          }
+          this._renderer.removeClass(this.toolbar._elementRef.nativeElement, 'dark-navbar');
         }
       });
   }

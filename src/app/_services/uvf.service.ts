@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '../../../node_modules/@angular/common/http';
-import { MatSidenav } from '../../../node_modules/@angular/material';
+import { MatSidenav, MatToolbar } from '../../../node_modules/@angular/material';
 
 
 @Injectable({
@@ -8,8 +8,9 @@ import { MatSidenav } from '../../../node_modules/@angular/material';
 })
 export class UvfService {
 
-  public noticiasData: any;;
+  public noticiasData: any;
   public sidenav: MatSidenav;
+  public toolbar: MatToolbar;
   public OEInkBarActive: boolean = false;
 
   constructor(public _http: HttpClient) { }
@@ -20,6 +21,10 @@ export class UvfService {
 
   public setNavside(sidenav: MatSidenav) {
     this.sidenav = sidenav;
+  }
+
+  public setToolbar(toolbar: MatToolbar) {
+    this.toolbar = toolbar;
   }
 
   setOEInkBar(state: boolean) {

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   constructor(public _uvfService: UvfService, private dialog: MatDialog) {
 
     this.mobileLinks = [
-      { label: 'Inicio', url: "", expandIconId: null, lvl2id: null, lvl2: null },
+      { label: 'Inicio', url: "/", expandIconId: null, lvl2id: null, lvl2: null },
       { label: 'UNIVAFU', url: "univafu", expandIconId: null, lvl2id: null, lvl2: null },
       { label: 'Oferta Educativa', url: null, expandIconId: "ex1", lvl2id: "id1", lvl2: [
         { url: "oferta-educativa/licenciaturas", label: "Licenciaturas" },
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
         { url: "", label: "Algebraix", clickeable: true },
       ] },
       { label: 'Contacto', url: "contacto", expandIconId: null, lvl2id: null, lvl2: null },
-      { label: 'Aviso legal', url: "aviso-legal", expandIconId: null, lvl2id: null, lvl2: null },
+      { label: 'Aviso legal', url: "/aviso-legal", expandIconId: null, lvl2id: null, lvl2: null },
     ]
 
   }

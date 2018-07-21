@@ -11,7 +11,11 @@
             <div *ngFor="let link of mobileLinks">
 
                 <mat-list-item *ngIf="!link.lvl2id; else elseBlock">
-                    <a matLine [routerLink]="link.url" routerLinkActive="active" class="list-item-a" (click)="sidenav.close()">
+                    <a matLine 
+                    [routerLink]="link.url" 
+                    routerLinkActive
+                    [class.active]="rla.router.url == link.url" 
+                    #rla="routerLinkActive" class="list-item-a" (click)="sidenav.close()">
                         {{link.label}}
                     </a>
                 </mat-list-item>
