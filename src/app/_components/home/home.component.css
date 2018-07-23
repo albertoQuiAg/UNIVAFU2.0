@@ -48,9 +48,9 @@
     transition: transform 0.4s, opacity 0.8s;
 }
 
-/* .oferta-educativa-wrapper {
-    padding: 16px;
-} */
+.oferta-educativa-wrapper {
+    margin-bottom: 16px;
+}
 
 .oec-info-wrapper {
     padding: 16px;
@@ -135,7 +135,7 @@
 .noticias-posts {
     display: flex;
     justify-content: center;
-    padding-bottom: 8px;
+    padding-bottom: 16px;
     flex-wrap: wrap;
 }
 
@@ -163,10 +163,6 @@
     .oec {
         display: flex;
         flex-direction: row;
-    }
-
-    .noticias-posts {
-        padding-bottom: 60px;
     }
 }
 

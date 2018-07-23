@@ -160,10 +160,8 @@
     .vnr-wrapper {
         background-color: #fff;
         width: 64%;
-        position: relative;
         margin-bottom: -92px;
         padding: 40px;
-        z-index: 1;
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -193,6 +191,11 @@
 
     .vnr-wrapper >h1 {
         font-size: 3em;
+    }
+
+    .contactanos-wrapper {
+        position: relative;
+        z-index: -1;
     }
 
 }

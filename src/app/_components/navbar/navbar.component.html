@@ -8,15 +8,15 @@
 
     <img class="navbar-logo" src="http://univafu.edu.mx/assetsWebsite/logos/univafu_blanco.png" alt="UNIVAFU">
 
-    
+
     <span class="navbar-space" *ngIf="mobileQuery.matches"></span>
 
     <nav mat-tab-nav-bar *ngIf="mobileQuery.matches" color="accent">
 
-        <a mat-tab-link
-            *ngFor="let link of navLinks"
-            [routerLink]="link.path"
-            routerLinkActive #rla="routerLinkActive"
+        <a mat-tab-link *ngFor="let link of navLinks" 
+            [routerLink]="link.path" 
+            routerLinkActive #rla="routerLinkActive" 
+            [routerLinkActiveOptions]="{exact:true}"
             [active]="rla.isActive">
             {{link.label}}
         </a>
@@ -29,14 +29,11 @@
             (onMenuClose)="onOEMenuClose('R')">Red UNIVAFU
             <mat-icon [@animateNavArrows]="naRedState">expand_more</mat-icon>
         </a> -->
-        <a mat-tab-link
-            routerLink="contacto"
-            routerLinkActive #rla="routerLinkActive"
-            [active]="rla.isActive">
+        <a mat-tab-link routerLink="contacto" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
             Contacto
         </a>
-    </nav> 
-        
+    </nav>
+
 </mat-toolbar>
 
 <!-- mat-menus -->
@@ -53,4 +50,4 @@
     <a mat-menu-item routerLink="red-univafu/iridh" routerLinkActive="active">IRIDH</a>
     <a mat-menu-item routerLink="red-univafu/innovagain" routerLinkActive="active">Innovagain</a>
     <a mat-menu-item style="padding-right: 79px;" (click)="onAlgebraix()">Algebraix</a>
-</mat-menu> 
+</mat-menu>

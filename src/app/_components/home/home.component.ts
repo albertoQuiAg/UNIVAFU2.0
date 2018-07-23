@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
 
-   }
+  }
 
   ngOnInit() {
     this.loadNoticias();
@@ -44,16 +44,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   loadNoticias() {
     this._uvfService.loadNoticiasData().pipe(
       take(1),
-      map((data:any) => {
+      map((data: any) => {
         return data.body.noticias
       })
-    ).subscribe((data:any) => {
+    ).subscribe((data: any) => {
       this.noticias = data;
     });
   }
 
   openNoticia(noticia: any) {
-    let dialogRef:any = this.dialog.open(NoticiasDialogComponent, {
+    let dialogRef: any = this.dialog.open(NoticiasDialogComponent, {
       data: {
         noticiaData: noticia
       }
@@ -117,10 +117,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   setResizeEvent() {
     this.resizeSub = fromEvent(window, 'resize')
       .pipe(
-        map((event:any) => ({
+        map((event: any) => ({
           innerWidth: event.target.innerWidth
         }))
-      ).subscribe((resize:any) => {
+      ).subscribe((resize: any) => {
         this.dialog.closeAll();
       });
   }

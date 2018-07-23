@@ -16,7 +16,7 @@ export class UvfService {
   constructor(public _http: HttpClient) { }
 
   loadNoticiasData() {
-    return this._http.get('assets/data/noticias.json', {observe: 'response'});
+    return this._http.get('assets/data/noticias.json', { observe: 'response' });
   }
 
   public setNavside(sidenav: MatSidenav) {

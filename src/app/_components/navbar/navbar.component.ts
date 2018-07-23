@@ -20,19 +20,19 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   _mobileQueryListener: () => void;
 
-  public navLinks:any = [
-    { "path" : "", "label" : "Inicio" },
-    { "path" : "univafu", "label" : "UNIVAFU" }
+  public navLinks: any = [
+    { "path": "", "label": "Inicio" },
+    { "path": "univafu", "label": "UNIVAFU" }
   ];
 
 
   constructor(
-    _changeDetectorRef: ChangeDetectorRef, 
-    _media: MediaMatcher, 
-    private _renderer: Renderer2, 
+    _changeDetectorRef: ChangeDetectorRef,
+    _media: MediaMatcher,
+    private _renderer: Renderer2,
     private _route: Router,
     public _uvfService: UvfService
-  ) { 
+  ) {
     this.mobileQuery = _media.matchMedia('(min-width: 900px)');
     this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -52,12 +52,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.scrollSub = fromEvent(window, 'scroll')
       .pipe(
         map((event: any) => ({
-          sT : event.target
+          sT: event.target
         }))
       ).subscribe((scroll) => {
         this.scrollTop = scroll.sT.scrollingElement.scrollTop;
 
-        if(this.scrollTop > 0) {
+        if (this.scrollTop > 0) {
           this._renderer.addClass(this.toolbar._elementRef.nativeElement, 'dark-navbar');
           this._renderer.addClass(this.toolbar._elementRef.nativeElement, 'animate-navbar');
         } else {
