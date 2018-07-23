@@ -129,6 +129,7 @@
     display: block;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
     margin-top: 16px;
 }
 

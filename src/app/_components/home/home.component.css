@@ -57,6 +57,7 @@
 }
 
 .oec-licenciaturas, .oec-posgrados, .oec-continua {
+    cursor: pointer;
     position: relative;
 }
 

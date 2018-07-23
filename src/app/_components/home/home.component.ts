@@ -67,10 +67,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.render.setStyle(element, 'transform', 'translateY(-120%)');
     this.render.setStyle(img.firstChild, 'filter', 'sepia(100%) brightness(80%)');
-    setTimeout(() => {
-      this.render.setStyle(element.children[0], 'transform', 'scale(1)');
-      this.render.setStyle(element.children[0], 'opacity', '1');
-    }, 140);
+    this.render.setStyle(element.children[0], 'transform', 'scale(1)');
+    this.render.setStyle(element.children[0], 'opacity', '1');
   }
 
   onPropuestaLeave(element: Element, img: Element) {

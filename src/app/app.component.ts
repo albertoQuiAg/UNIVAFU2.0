@@ -1,7 +1,11 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { MatSidenav, MatDialog } from '../../node_modules/@angular/material';
 import { UvfService } from './_services/uvf.service';
 import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialog/algebraix-dialog.component';
+import { MediaMatcher } from '../../node_modules/@angular/cdk/layout';
+import { Subscription } from '../../node_modules/rxjs';
+import { Router, NavigationEnd } from '../../node_modules/@angular/router';
+import { filter } from '../../node_modules/rxjs/operators';
 
 @Component({
   selector: 'app-univafu',
@@ -9,7 +13,7 @@ import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialo
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
   @ViewChild('sidenav') public sidenav: MatSidenav;
   mobileLinks: Array<
@@ -21,7 +25,17 @@ export class AppComponent implements OnInit {
     lvl2: any
   }>;
 
-  constructor(public _uvfService: UvfService, private dialog: MatDialog) {
+  mobileQuery: MediaQueryList;
+  _mobileQueryListener: () => void;
+  routeSub: Subscription;
+
+  constructor(
+    public _uvfService: UvfService, 
+    private dialog: MatDialog, 
+    _changeDetectorRef: ChangeDetectorRef, 
+    _media: MediaMatcher, 
+    private router: Router
+  ) {
 
     this.mobileLinks = [
       { label: 'Inicio', url: "/", expandIconId: null, lvl2id: null, lvl2: null },
@@ -40,14 +54,38 @@ export class AppComponent implements OnInit {
         { url: "", label: "Algebraix", clickeable: true },
       ] },
       { label: 'Contacto', url: "contacto", expandIconId: null, lvl2id: null, lvl2: null },
-      { label: 'Aviso legal', url: "/aviso-legal", expandIconId: null, lvl2id: null, lvl2: null },
-    ]
+      { label: 'Aviso de privacidad', url: "/aviso-legal", expandIconId: null, lvl2id: null, lvl2: null },
+    ];
+
+    this.mobileQuery = _media.matchMedia('(min-width: 900px)');
+    this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
 
   }
 
   ngOnInit() {
+    this.setRouterEvents();
     this._uvfService.setNavside(this.sidenav);
     this.checkMenu();
+
+    this.mobileQuery.addListener((wea: any) => {
+      if (this.sidenav.opened) {
+        this.sidenav.close();
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.routeSub.unsubscribe();
+    this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  setRouterEvents() {
+    this.routeSub = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      window.scrollTo(0, 0);
+    })
   }
 
   onLvl2Click(id, expandId) {
