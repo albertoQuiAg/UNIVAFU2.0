@@ -14,19 +14,19 @@ switch($_SERVER['REQUEST_METHOD']){
         $data = json_decode($json);
 
         switch($data->sendMailTo) {
-            case "uvf" :
+            case 0 :
                 $to = "community.manager@univafu.edu.mx";
                 break;
-            case "iiu" :
+            case 1 :
                 $to = "iiu@univafu.edu.mx";
                 break;
-            case "fun" :
+            case 2 :
                 $to = "fundacionunivafu@univafu.edu.mx";
                 break;
-            case "iri" :
+            case 3 :
                 $to = "inst.rehabilitacion@univafu.edu.mx";
                 break;
-            case "inn" :
+            case 4 :
                 $to = "community.manager@univafu.edu.mx";
                 break;
             default :

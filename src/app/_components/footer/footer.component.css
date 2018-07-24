@@ -158,6 +158,8 @@
     }
 
     .vnr-wrapper {
+        position: relative;
+        z-index: 1;
         background-color: #fff;
         width: 64%;
         margin-bottom: -92px;
@@ -189,7 +191,7 @@
         font-size: 3em;
     }
 
-    .vnr-wrapper >h1 {
+    .vnr-wrapper > h1 {
         font-size: 3em;
     }
 

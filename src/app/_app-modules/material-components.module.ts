@@ -18,6 +18,7 @@ import {
 } from '@angular/material';
 import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
 import { FooterComponent } from '../_components/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '../../../node_modules/@angular/forms';
 
 @NgModule({
     declarations: [
@@ -42,6 +43,8 @@ import { FooterComponent } from '../_components/footer/footer.component';
         MatSidenavModule
     ],
     exports: [
+        FormsModule,
+        ReactiveFormsModule,
         MatButtonModule,
         MatToolbarModule,
         MatTabsModule,
