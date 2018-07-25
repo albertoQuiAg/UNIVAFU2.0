@@ -66,8 +66,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.setRouterEvents();
     this._uvfService.setNavside(this.sidenav);
-    this.checkMenu();
-
+    
     this._uvfService.mobileQuery.addListener((wea: any) => {
       if (this.sidenav.opened) {
         this.sidenav.close();
@@ -85,6 +84,7 @@ export class AppComponent implements OnInit, OnDestroy {
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
       window.scrollTo(0, 0);
+      this.checkMenu();
     })
   }
 
