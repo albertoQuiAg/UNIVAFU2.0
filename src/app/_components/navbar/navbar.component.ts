@@ -1,9 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef, OnDestroy, ViewChild, Renderer2 } from '@angular/core';
-import { MediaMatcher } from '../../../../node_modules/@angular/cdk/layout';
+import { Component, OnInit, OnDestroy, ViewChild, Renderer2 } from '@angular/core';
 import { MatToolbar } from '../../../../node_modules/@angular/material';
 import { fromEvent, Subscription } from '../../../../node_modules/rxjs';
 import { map } from 'rxjs/operators';
-import { Router } from '../../../../node_modules/@angular/router';
 import { UvfService } from '../../_services/uvf.service';
 
 @Component({
@@ -17,8 +15,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   scrollSub: Subscription;
   scrollTop: number;
-  mobileQuery: MediaQueryList;
-  _mobileQueryListener: () => void;
 
   // @Output() public menuClosed: EventEmitter<void> = new EventEmitter<void>();
   // @Output() public menuOpened: EventEmitter<void> = new EventEmitter<void>();
@@ -30,16 +26,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
 
   constructor(
-    _changeDetectorRef: ChangeDetectorRef,
-    _media: MediaMatcher,
     private _renderer: Renderer2,
-    private _route: Router,
     public _uvfService: UvfService
-  ) {
-    this.mobileQuery = _media.matchMedia('(min-width: 900px)');
-    this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-  }
+  ) { }
 
   ngOnInit() {
     this.setScrollEvent();
@@ -48,7 +37,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.scrollSub.unsubscribe();
-    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   setScrollEvent() {

@@ -16,7 +16,7 @@
     <div class="oec-box1">
       <div class="line oec-line"></div>
       <h1>NUESTRA OFERTA
-        <br *ngIf="mobileQuery.matches"> EDUCATIVA</h1>
+        <br *ngIf="_uvfService.mobileQuery.matches"> EDUCATIVA</h1>
     </div>
     <div class="oec-box2">
       <p>Conoce nuestros programas académicos diseñados con una visión integral, donde podrás poner en práctica tus conocimientos
@@ -29,7 +29,7 @@
         <img src="http://univafu.edu.mx/assetsWebsite/images/home/index_licenciaturas.jpg" alt="UNIVAFU LICENCIATURAS" class="oec-img">
       </div>
       <div class="oec-flex" #lic>
-        <div *ngIf="mobileQuery.matches" class="line oec-line2"></div>
+        <div *ngIf="_uvfService.mobileQuery.matches" class="line oec-line2"></div>
         <div class="oec-titles">
           <h2>LICENCIATURAS</h2>
         </div>
@@ -40,7 +40,7 @@
         <img src="http://univafu.edu.mx/assetsWebsite/images/home/index_posgrado.jpg" alt="UNIVAFU POSGRADOS" class="oec-img">
       </div>
       <div class="oec-flex" #pos>
-        <div *ngIf="mobileQuery.matches" class="line oec-line2"></div>
+        <div *ngIf="_uvfService.mobileQuery.matches" class="line oec-line2"></div>
         <div class="oec-titles">
           <h2>POSGRADOS</h2>
         </div>
@@ -52,7 +52,7 @@
           class="oec-img">
       </div>
       <div class="oec-flex" #edu>
-        <div *ngIf="mobileQuery.matches" class="line oec-line2"></div>
+        <div *ngIf="_uvfService.mobileQuery.matches" class="line oec-line2"></div>
         <div class="oec-titles">
           <h2>EDUCACIÓN CONTINUA</h2>
         </div>
@@ -63,11 +63,11 @@
 
 <div class="gwb-container">
   <div class="gwb-bg"></div>
-  <div class="gwb-wrapper" [class.mat-elevation-z4]="mobileQuery.matches">
+  <div class="gwb-wrapper" [class.mat-elevation-z4]="_uvfService.mobileQuery.matches">
     <div class="gwb-box1">
       <div class="line gwb-line"></div>
       <h1 class="gwb-box1-title">ESTUDIA CON
-        <br *ngIf="mobileQuery.matches"> NOSOTROS</h1>
+        <br *ngIf="_uvfService.mobileQuery.matches"> NOSOTROS</h1>
     </div>
     <div class="gwb-box2">
       <p class="home-gwb-box2-desc">UNIVAFU Universidad, te ofrece una experiencia única al cursar clases con maestros internacionales y de reconocida
@@ -81,7 +81,7 @@
 <div class="serv">
 
   <div class="serv-flex-wrapper" #iiu>
-    <div *ngIf="mobileQuery.matches" class="serv-iiu serv-img"></div>
+    <div *ngIf="_uvfService.mobileQuery.matches" class="serv-iiu serv-img"></div>
     <div class="serv-descs">
       <img src="http://univafu.edu.mx/assetsWebsite/logos/iiu.png" alt="iiu instituto de idiomas UNIVAFU" class="serv-logo">
       <p style="margin-top: 60px;">Somos un centro especializado en el aprendizaje de idiomas, abierto al público en general, en donde recibimos a toda
@@ -99,11 +99,11 @@
       <br>
       <button mat-stroked-button class="white-stroked-button" (mouseenter)="onServsEnter(fundacion)" (mouseleave)="onServsLeave(fundacion)">Más Información</button>
     </div>
-    <div *ngIf="mobileQuery.matches" class="serv-fundacion serv-img"></div>
+    <div *ngIf="_uvfService.mobileQuery.matches" class="serv-fundacion serv-img"></div>
   </div>
 
   <div class="serv-flex-wrapper" #innova>
-    <div *ngIf="mobileQuery.matches" class="serv-innovagain serv-img"></div>
+    <div *ngIf="_uvfService.mobileQuery.matches" class="serv-innovagain serv-img"></div>
     <div class="serv-descs">
       <img src="http://univafu.edu.mx/assetsWebsite/logos/innovagain.png" alt="Innovagain" class="serv-logo">
       <p>Somos agencia de innovación y negocios, enfocada a la transferencia de conocimiento y comercialización de tecnologías,
@@ -121,7 +121,7 @@
       <br>
       <button mat-stroked-button class="white-stroked-button" (mouseenter)="onServsEnter(iridh)" (mouseleave)="onServsLeave(iridh)">Más Información</button>
     </div>
-    <div *ngIf="mobileQuery.matches" class="serv-iridh serv-img"></div>
+    <div *ngIf="_uvfService.mobileQuery.matches" class="serv-iridh serv-img"></div>
   </div>
 
 </div>

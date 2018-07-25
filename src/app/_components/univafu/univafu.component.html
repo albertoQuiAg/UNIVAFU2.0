@@ -10,7 +10,7 @@
 
 <div class="wrapper-mvp">
   <div class="mvp-box1">
-    <img *ngIf="mobileQuery.matches" src="http://univafu.edu.mx/assetsWebsite/images/univafu/univafu.jpg" alt="UNIVAU">
+    <img *ngIf="_uvfService.mobileQuery.matches" src="http://univafu.edu.mx/assetsWebsite/images/univafu/univafu.jpg" alt="UNIVAU">
   </div>
   <div class="mvp-box2 uvf-mvp">
     <div class="uvf-mvp-box">
@@ -33,11 +33,11 @@
 
 <div class="gwb-container">
   <div class="gwb-bg"></div>
-  <div class="gwb-wrapper" [class.mat-elevation-z4]="mobileQuery.matches">
+  <div class="gwb-wrapper" [class.mat-elevation-z4]="_uvfService.mobileQuery.matches">
     <div class="gwb-box1">
       <div class="line gwb-line"></div>
       <h1 class="gwb-box1-title uvf-gwb-box1-title">NUESTROS
-        <br *ngIf="mobileQuery.matches"> VALORES</h1>
+        <br *ngIf="_uvfService.mobileQuery.matches"> VALORES</h1>
     </div>
     <div class="gwb-box2">
       <ul class="gwb-list">

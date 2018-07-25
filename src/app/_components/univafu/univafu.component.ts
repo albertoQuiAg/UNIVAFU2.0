@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { MediaMatcher } from '../../../../node_modules/@angular/cdk/layout';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { UvfService } from '../../_services/uvf.service';
 
 @Component({
   selector: 'app-conocenos',
@@ -8,21 +8,14 @@ import { MediaMatcher } from '../../../../node_modules/@angular/cdk/layout';
 })
 export class UnivafuComponent implements OnInit, OnDestroy {
 
-  mobileQuery: MediaQueryList;
-  _mobileQueryListener: () => void;
-
-  constructor(_changeDetectorRef: ChangeDetectorRef, _media: MediaMatcher) {
-    this.mobileQuery = _media.matchMedia('(min-width: 900px)');
-    this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-  }
+  constructor(public _uvfService: UvfService) { }
 
   ngOnInit() {
 
   }
 
   ngOnDestroy() {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+
   }
 
 }

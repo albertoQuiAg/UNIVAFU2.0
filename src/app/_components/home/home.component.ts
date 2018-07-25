@@ -1,6 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef, OnDestroy, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { UvfService } from 'src/app/_services/uvf.service';
-import { MediaMatcher } from '../../../../node_modules/@angular/cdk/layout';
 import { take, map, filter } from '../../../../node_modules/rxjs/operators';
 import { MatDialog } from '../../../../node_modules/@angular/material';
 import { NoticiasDialogComponent } from '../_dialogs/noticias-dialog/noticias-dialog.component';
@@ -13,23 +12,13 @@ import { Subscription, fromEvent } from '../../../../node_modules/rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  mobileQuery: MediaQueryList;
-  _mobileQueryListener: () => void;
   noticias: any;
   resizeSub: Subscription;
 
   constructor(
-    _changeDetectorRef: ChangeDetectorRef,
-    _media: MediaMatcher,
     private _uvfService: UvfService,
     private dialog: MatDialog,
-    private render: Renderer2) {
-
-    this.mobileQuery = _media.matchMedia('(min-width: 900px)');
-    this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-
-  }
+    private render: Renderer2) { }
 
   ngOnInit() {
     this.loadNoticias();
@@ -37,7 +26,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
     this.resizeSub.unsubscribe();
   }
 
@@ -61,7 +49,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onPropuestaEnter(element: Element, img: Element) {
-    if (!this.mobileQuery.matches) {
+    if (!this._uvfService.mobileQuery.matches) {
       return;
     }
 
@@ -72,7 +60,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onPropuestaLeave(element: Element, img: Element) {
-    if (!this.mobileQuery.matches) {
+    if (!this._uvfService.mobileQuery.matches) {
       return;
     }
 
@@ -83,7 +71,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onServsEnter(el: Element) {
-    if (!this.mobileQuery.matches) {
+    if (!this._uvfService.mobileQuery.matches) {
       return;
     }
 
@@ -99,7 +87,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onServsLeave(el: Element) {
-    if (!this.mobileQuery.matches) {
+    if (!this._uvfService.mobileQuery.matches) {
       return;
     }
 

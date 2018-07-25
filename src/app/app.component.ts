@@ -2,7 +2,6 @@ import { Component, ViewChild, OnInit, OnDestroy, ChangeDetectorRef } from '@ang
 import { MatSidenav, MatDialog } from '../../node_modules/@angular/material';
 import { UvfService } from './_services/uvf.service';
 import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialog/algebraix-dialog.component';
-import { MediaMatcher } from '../../node_modules/@angular/cdk/layout';
 import { Subscription } from '../../node_modules/rxjs';
 import { Router, NavigationEnd } from '../../node_modules/@angular/router';
 import { filter } from '../../node_modules/rxjs/operators';
@@ -25,7 +24,6 @@ export class AppComponent implements OnInit, OnDestroy {
       lvl2: any
     }>;
 
-  mobileQuery: MediaQueryList;
   _mobileQueryListener: () => void;
   routeSub: Subscription;
 
@@ -33,7 +31,6 @@ export class AppComponent implements OnInit, OnDestroy {
     public _uvfService: UvfService,
     private dialog: MatDialog,
     _changeDetectorRef: ChangeDetectorRef,
-    _media: MediaMatcher,
     private router: Router
   ) {
 
@@ -61,9 +58,8 @@ export class AppComponent implements OnInit, OnDestroy {
       { label: 'Aviso de privacidad', url: "/aviso-legal", expandIconId: null, lvl2id: null, lvl2: null },
     ];
 
-    this.mobileQuery = _media.matchMedia('(min-width: 900px)');
     this._mobileQueryListener = () => _changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this._uvfService.mobileQuery.addListener(this._mobileQueryListener);
 
   }
 
@@ -72,7 +68,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this._uvfService.setNavside(this.sidenav);
     this.checkMenu();
 
-    this.mobileQuery.addListener((wea: any) => {
+    this._uvfService.mobileQuery.addListener((wea: any) => {
       if (this.sidenav.opened) {
         this.sidenav.close();
       }
@@ -81,7 +77,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.routeSub.unsubscribe();
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this._uvfService.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   setRouterEvents() {
