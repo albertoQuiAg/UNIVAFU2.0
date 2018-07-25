@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy, ViewChild, Renderer2 } from '@angular/core';
-import { MatToolbar } from '../../../../node_modules/@angular/material';
+import { MatToolbar, MatDialog } from '../../../../node_modules/@angular/material';
 import { fromEvent, Subscription } from '../../../../node_modules/rxjs';
 import { map } from 'rxjs/operators';
 import { UvfService } from '../../_services/uvf.service';
+import { AlgebraixDialogComponent } from '../_dialogs/algebraix-dialog/algebraix-dialog.component';
 
 @Component({
   selector: 'app-navbar',
@@ -27,7 +28,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   constructor(
     private _renderer: Renderer2,
-    public _uvfService: UvfService
+    public _uvfService: UvfService,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit() {
@@ -55,6 +57,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
           this._renderer.removeClass(this.toolbar._elementRef.nativeElement, 'dark-navbar');
         }
       });
+  }
+
+  onAlgebraix() {
+    this.dialog.open(AlgebraixDialogComponent);
   }
 
   // onOEMenuOpen(id: string) {
