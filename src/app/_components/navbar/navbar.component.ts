@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   _mobileQueryListener: () => void;
 
+  // @Output() public menuClosed: EventEmitter<void> = new EventEmitter<void>();
+  // @Output() public menuOpened: EventEmitter<void> = new EventEmitter<void>();
+
   public navLinks: any = [
     { "path": "", "label": "Inicio" },
     { "path": "univafu", "label": "UNIVAFU" }
@@ -65,5 +68,21 @@ export class NavbarComponent implements OnInit, OnDestroy {
         }
       });
   }
+
+  // onOEMenuOpen(id: string) {
+  //   if (id === 'OE') {
+  //     this.naOEState = "active";
+  //   } else {
+  //     this.naRedState = "active"
+  //   }
+  // }
+
+  // onOEMenuClose(id: string) {
+  //   if (id === 'OE') {
+  //     this.naOEState = "inactive";
+  //   } else {
+  //     this.naRedState = "inactive";
+  //   }
+  // }
 
 }

@@ -25,10 +25,9 @@
             (onMenuClose)="onOEMenuClose('OE')">Oferta Educativa
             <mat-icon [@animateNavArrows]="naOEState">expand_more</mat-icon>
         </a> -->
-        <!-- <a mat-tab-link [active]="RUInkBarActive" [matMenuTriggerFor]="RedMenu" (onMenuOpen)="onOEMenuOpen('R')" 
-            (onMenuClose)="onOEMenuClose('R')">Red UNIVAFU
-            <mat-icon [@animateNavArrows]="naRedState">expand_more</mat-icon>
-        </a> -->
+        <a mat-tab-link [active]="_uvfService.RUInkBarActive" [matMenuTriggerFor]="RedMenu">Red UNIVAFU
+            <mat-icon>expand_more</mat-icon>
+        </a>
         <a mat-tab-link routerLink="contacto" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
             Contacto
         </a>
@@ -37,14 +36,14 @@
 </mat-toolbar>
 
 <!-- mat-menus -->
-<mat-menu #OEMenu="matMenu">
+<mat-menu #OEMenu="matMenu" [overlapTrigger]="false">
     <a mat-menu-item routerLink="oferta-educativa/licenciaturas" routerLinkActive="active">Licenciaturas</a>
     <a mat-menu-item routerLink="oferta-educativa/posgrados" routerLinkActive="active">Posgrados</a>
     <a mat-menu-item routerLink="oferta-educativa/educacion-continua" routerLinkActive="active">Educación Continua</a>
     <a mat-menu-item href="https://c1-univafu.algebraix.com/bin/g/enrollments/default/" target="blank" style="padding-right: 37px;">Inscripciones en línea</a>
 </mat-menu>
 
-<mat-menu #RedMenu="matMenu">
+<mat-menu #RedMenu="matMenu" [overlapTrigger]="false">
     <a mat-menu-item routerLink="red-univafu/iiu" routerLinkActive="active">IIU</a>
     <a mat-menu-item routerLink="red-univafu/fundacion" routerLinkActive="active">Fundación</a>
     <a mat-menu-item routerLink="red-univafu/iridh" routerLinkActive="active">IRIDH</a>

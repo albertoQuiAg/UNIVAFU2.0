@@ -53,6 +53,14 @@ body, html {
     max-width: 800px;
 }
 
+.abi-centrar > h1 {
+    text-align: center;
+}
+
+.abi-info-line {
+    margin: auto;
+}
+
 .wrapper-mvp {
     padding: 16px;
 }
