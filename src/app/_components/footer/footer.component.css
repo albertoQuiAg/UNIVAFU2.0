@@ -194,10 +194,4 @@
     .vnr-wrapper > h1 {
         font-size: 3em;
     }
-
-    .contactanos-wrapper {
-        position: relative;
-        z-index: -1;
-    }
-
 }

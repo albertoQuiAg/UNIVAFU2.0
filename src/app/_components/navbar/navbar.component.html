@@ -13,18 +13,14 @@
 
     <nav mat-tab-nav-bar *ngIf="_uvfService.mobileQuery.matches" color="accent">
 
-        <a mat-tab-link *ngFor="let link of navLinks" 
-            [routerLink]="link.path" 
-            routerLinkActive #rla="routerLinkActive" 
-            [routerLinkActiveOptions]="{exact:true}"
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive" [routerLinkActiveOptions]="{exact:true}"
             [active]="rla.isActive">
             {{link.label}}
         </a>
 
-        <!-- <a mat-tab-link [active]="OEInkBarActive" [matMenuTriggerFor]="OEMenu" (onMenuOpen)="onOEMenuOpen('OE')" 
-            (onMenuClose)="onOEMenuClose('OE')">Oferta Educativa
-            <mat-icon [@animateNavArrows]="naOEState">expand_more</mat-icon>
-        </a> -->
+        <a mat-tab-link [active]="_uvfService.OEInkBarActive" [matMenuTriggerFor]="OEMenu">Oferta Educativa
+            <mat-icon>expand_more</mat-icon>
+        </a>
         <a mat-tab-link [active]="_uvfService.RUInkBarActive" [matMenuTriggerFor]="RedMenu">Red UNIVAFU
             <mat-icon>expand_more</mat-icon>
         </a>

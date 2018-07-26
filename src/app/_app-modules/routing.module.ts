@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     { path: '', loadChildren: 'src/app/_components/home/home.module#HomeModule' },
     { path: 'univafu', loadChildren: 'src/app/_components/univafu/univafu.module#UnivafuModule' },
+    { path: 'oferta-educativa/educacion-continua', loadChildren: 'src/app/_components/_oferta-educativa/educacion-continua/educacion-continua.module#EducacionContinuaModule' },
     { path: 'red-univafu/fundacion', loadChildren: 'src/app/_components/_red-univafu/fundacion/fundacion.module#FundacionModule' },
     { path: 'red-univafu/iiu', loadChildren: 'src/app/_components/_red-univafu/iiu/iiu.module#IiuModule' },
     { path: 'red-univafu/innovagain', loadChildren: 'src/app/_components/_red-univafu/innovagain/innovagain.module#InnovagainModule' },

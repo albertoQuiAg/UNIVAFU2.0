@@ -36,6 +36,10 @@ export class UvfService {
     this.OEInkBarActive = state;
   }
 
+  setOEInkBarActive(state: boolean) {
+    this.OEInkBarActive = state;
+  }
+
   setRUInkBarActive(state: boolean) {
     this.RUInkBarActive = state;
   }

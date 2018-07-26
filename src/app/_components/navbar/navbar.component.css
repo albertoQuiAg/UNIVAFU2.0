@@ -38,3 +38,16 @@
 .active {
     background-color: rgba(0,0,0,.04);
 }
+
+@media only screen and (min-width: 900px) { 
+    .navbar-logo {
+        display: none;
+    }    
+}
+
+@media only screen and (min-width: 1000px) { 
+    .navbar-logo {
+        display: block;
+        height: 1.4em;
+    }
+}
