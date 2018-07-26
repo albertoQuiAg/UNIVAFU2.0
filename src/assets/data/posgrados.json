@@ -1,0 +1,115 @@
+{
+    "headers": {
+        "imgUrl": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/posgrados/Portada.jpg",
+        "title": "POSGRADOS",
+        "title2": "PROGRAMAS",
+        "title3": " DE POSGRADO",
+        "desc": "Te invitamos a conocer los programas ejecutivos que UNIVAFU Universidad tiene para tí."
+    },
+    "links": [
+        {
+            "label": "Maestría en Metodología del Entrenamiento Deportivo",
+            "url": "mmed"
+        }
+    ],
+    "mmed": {
+        "urlImg1": "assets/images/oferta-educativa/posgrados/mmed/1.jpg",
+        "titulo1": "Maestría en Metodología del Entrenamiento Deportivo",
+        "desc1": "Es un programa que desarrolla profesionales con plena conciencia de los procesos que rigen el entrenamiento deportivo, permitiendo solucionar total o parcialmente los problemas inherentes a la teoría y metodología del entrenamiento; y partiendo de una visión científico – tecnológica, ser un ente facilitador del cambio promoviendo efectivamente el desarrollo óptimo del deportista del alto rendimiento en instituciones del sector público o privado.",
+        "titulo2": "Perfil de egreso",
+        "subTitulo2": "Serás capaz de:",
+        "desc2": "",
+        "lista2": [
+            {
+                "line": "Elaborar  planes de trabajo, dirigir y controlar su ejecución."
+            },
+            {
+                "line": "Diseñar y dirigir investigaciones encaminadas a la solución de problemas científicos relacionados con el rendimiento deportivo."
+            },
+            {
+                "line": "Interactuar activa y efectivamente con especialistas de todas las áreas que intervienen en el desarrollo integral del deportista."
+            },
+            {
+                "line": "Emplear valores como especialista de la teoría y metodología del entrenamiento deportivo."
+            }
+        ],
+        "urlImg2": "assets/images/oferta-educativa/posgrados/mmed/2.jpg",
+        "urlImg3": "assets/images/oferta-educativa/posgrados/mmed/3.jpg",
+        "titulo3": "Modalidad",
+        "desc3": "El programa se desarrolla en 4 semestres en modalidad mixta. (Fines de semana; sesión virtual y presencial). Se realizarán clases prácticas, estudios de caso y se formularán proyectos por asignatura, con participación en coloquios y deseable publicación en revista científica.",
+        "lista3": [],
+        "semestres": [
+            {
+                "titulo": "1er Semestre",
+                "materias": [
+                    {
+                        "titulo": "Novedades Pedagógicas y Didácticas en el Deporte"
+                    },
+                    {
+                        "titulo": "Fisiología y Bioquímica en el Entrenamiento Deportivo"
+                    },
+                    {
+                        "titulo": "Modelos Mecánicos en el Deporte"
+                    },
+                    {
+                        "titulo": "Estadística Aplicada a la Actividad Deportiva"
+                    },
+                    {
+                        "titulo": "Metodología de la Investigación en los Deportes"
+                    }
+                ]
+            },
+            {
+                "titulo": "2do Semestre",
+                "materias": [
+                    {
+                        "titulo": "Psicología para el Rendimiento Deportivo"
+                    },
+                    {
+                        "titulo": "Control Médico del Entrenamiento Deportivo I"
+                    },
+                    {
+                        "titulo": "Teoría y Metodología del Entrenamiento Deportivo I"
+                    },
+                    {
+                        "titulo": "Modelación del Proceso de Entrenamiento"
+                    },
+                    {
+                        "titulo": "Seminario de Investigación I"
+                    }
+                ]
+            },
+            {
+                "titulo": "3er Semestre",
+                "materias": [
+                    {
+                        "titulo": "Etapas de Formación del Deportista"
+                    },
+                    {
+                        "titulo": "Nutrición y Rendimiento Deportivo"
+                    },
+                    {
+                        "titulo": "Teoría y Metodología del Entrenamiento Deportivo II"
+                    },
+                    {
+                        "titulo": "Seminario de Investigación II"
+                    }
+                ]
+            },
+            {
+                "titulo": "4to Semestre",
+                "materias": [
+                    {
+                        "titulo": "Higiene y Prevención de Traumas Físicos"
+                    },
+                    {
+                        "titulo": "Gestión y Dirección del Deporte"
+                    },
+                    {
+                        "titulo": "Seminario de Investigación III"
+                    }
+                ]
+            }
+        ]
+    }
+}

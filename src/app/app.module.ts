@@ -10,6 +10,7 @@ import { RoutingModule } from './_app-modules/routing.module';
 import { UvfService } from './_services/uvf.service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialog/algebraix-dialog.component';
+import { RouteGuardService } from './_services/route-guard.service';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialo
     HttpClientModule,
   ],
   providers: [
-    UvfService
+    UvfService,
+    RouteGuardService
   ],
   entryComponents: [
     AlgebraixDialogComponent
