@@ -13,7 +13,7 @@
         }
     ],
     "mmed": {
-        "urlImg1": "assets/images/oferta-educativa/posgrados/mmed/1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/posgrados/mmed/1.jpg",
         "titulo1": "Maestría en Metodología del Entrenamiento Deportivo",
         "desc1": "Es un programa que desarrolla profesionales con plena conciencia de los procesos que rigen el entrenamiento deportivo, permitiendo solucionar total o parcialmente los problemas inherentes a la teoría y metodología del entrenamiento; y partiendo de una visión científico – tecnológica, ser un ente facilitador del cambio promoviendo efectivamente el desarrollo óptimo del deportista del alto rendimiento en instituciones del sector público o privado.",
         "titulo2": "Perfil de egreso",
@@ -33,8 +33,8 @@
                 "line": "Emplear valores como especialista de la teoría y metodología del entrenamiento deportivo."
             }
         ],
-        "urlImg2": "assets/images/oferta-educativa/posgrados/mmed/2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/posgrados/mmed/3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/posgrados/mmed/2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/posgrados/mmed/3.jpg",
         "titulo3": "Modalidad",
         "desc3": "El programa se desarrolla en 4 semestres en modalidad mixta. (Fines de semana; sesión virtual y presencial). Se realizarán clases prácticas, estudios de caso y se formularán proyectos por asignatura, con participación en coloquios y deseable publicación en revista científica.",
         "lista3": [],

@@ -3,7 +3,7 @@ import { MatSidenav, MatDialog } from '../../node_modules/@angular/material';
 import { UvfService } from './_services/uvf.service';
 import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialog/algebraix-dialog.component';
 import { Subscription } from '../../node_modules/rxjs';
-import { Router, NavigationEnd } from '../../node_modules/@angular/router';
+import { Router, NavigationEnd, NavigationStart } from '../../node_modules/@angular/router';
 import { filter } from '../../node_modules/rxjs/operators';
 
 @Component({
@@ -26,6 +26,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   _mobileQueryListener: () => void;
   routeSub: Subscription;
+  navStartSub: Subscription;
+  checkFlag: boolean = false;
 
   constructor(
     public _uvfService: UvfService,
@@ -66,7 +68,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.setRouterEvents();
     this._uvfService.setNavside(this.sidenav);
-    
+
     this._uvfService.mobileQuery.addListener((wea: any) => {
       if (this.sidenav.opened) {
         this.sidenav.close();
@@ -80,12 +82,27 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   setRouterEvents() {
+    // this.navStartSub = this.router.events.pipe(
+    //   filter(event => event instanceof NavigationStart)
+    // ).subscribe((event:any) => {
+    //   console.log(event);
+    // });
+
     this.routeSub = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      window.scrollTo(0, 0);
+    ).subscribe((event: any) => {
+      let url: any = event.url.split('/');
+
+      if (url[1] == "oferta-educativa") {
+        if (url.length == 3) {
+          window.scrollTo(0, 0);
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
+
       this.checkMenu();
-    })
+    });
   }
 
   onLvl2Click(id, expandId) {
@@ -105,6 +122,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   checkMenu() {
+    if (this.checkFlag) return;
+
     setTimeout(() => {
       let sublvlArray: any = document.querySelectorAll('.wrapper-lvl2');
 
@@ -115,6 +134,8 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       }
     });
+
+    this.checkFlag = true;
   }
 
   onAlgebraix() {

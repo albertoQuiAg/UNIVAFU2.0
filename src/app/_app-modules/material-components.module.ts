@@ -19,12 +19,18 @@ import {
 import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
 import { FooterComponent } from '../_components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '../../../node_modules/@angular/forms';
+import { OfertaHeadersComponent } from '../_components/_oferta-educativa/oferta-headers/oferta-headers.component';
+import { CommonModule } from '../../../node_modules/@angular/common';
+import { RouterModule } from '../../../node_modules/@angular/router';
 
 @NgModule({
     declarations: [
-        FooterComponent
+        FooterComponent,
+        OfertaHeadersComponent
     ],
     imports: [
+        CommonModule,
+        RouterModule,
         MatButtonModule,
         MatToolbarModule,
         MatTabsModule,
@@ -61,7 +67,8 @@ import { FormsModule, ReactiveFormsModule } from '../../../node_modules/@angular
         LayoutModule,
         MatProgressSpinnerModule,
         MatSidenavModule,
-        FooterComponent
+        FooterComponent,
+        OfertaHeadersComponent
     ],
     providers: []
 })

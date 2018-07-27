@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UvfService } from '../../../_services/uvf.service';
 
 @Component({
   selector: 'app-programas',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgramasComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _uvfService: UvfService) { }
 
   ngOnInit() {
   }

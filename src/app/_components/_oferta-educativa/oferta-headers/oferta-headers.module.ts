@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { OfertaHeadersRoutingModule } from './oferta-headers-routing.module';
 import { MaterialComponentsModule } from '../../../_app-modules/material-components.module';
-import { OfertaHeadersComponent } from './oferta-headers.component';
 
 @NgModule({
   imports: [
@@ -11,8 +10,6 @@ import { OfertaHeadersComponent } from './oferta-headers.component';
     OfertaHeadersRoutingModule,
     MaterialComponentsModule
   ],
-  declarations: [
-    OfertaHeadersComponent
-  ]
+  declarations: []
 })
 export class OfertaHeadersModule { }

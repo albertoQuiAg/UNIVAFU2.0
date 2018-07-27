@@ -20,6 +20,7 @@ export class UvfService {
   public links: any;
   public licenciaturasData: any;
   public posgradosData: any;
+  public programasData: any;
 
   constructor(public _http: HttpClient, _media: MediaMatcher) {
     this.mobileQuery = _media.matchMedia('(min-width: 900px)');
@@ -64,6 +65,10 @@ export class UvfService {
 
   setPosgradosData(data: any) {
     this.posgradosData = data;
+  }
+
+  setProgramasData(data: any) {
+    this.programasData = data;
   }
 
 }

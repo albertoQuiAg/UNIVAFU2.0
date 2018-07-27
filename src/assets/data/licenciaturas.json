@@ -45,15 +45,15 @@
         }
     ],
     "lcfd": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/lcfd/licenciatura_deporte_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lcfd/licenciatura_deporte_1.jpg",
         "titulo1": "Licenciatura en Cultura Física y Deporte",
         "desc1": "Podrás adquirir bases científicas para la formación docente en la educación física, el entrenamiento deportivo, la recreación y la cultura física terapéutica, regida por valores y principios que permitan el desarrollo físico y mental del ser humano.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Como docente en instituciones educativas de todos los niveles, promotor de la salud en organismos de salud pública y privada y administrador deportivo. En centros especializados en deporte, rehabilitación y preparación física.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/lcfd/licenciatura_deporte_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/lcfd/licenciatura_deporte_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lcfd/licenciatura_deporte_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lcfd/licenciatura_deporte_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -267,15 +267,15 @@
         ]
     },
     "lgtyg": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/lgtyg/licenciatura_turismo_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lgtyg/licenciatura_turismo_1.jpg",
         "titulo1": "Licenciatura en Gestión Turística y Gastronomía",
         "desc1": "Conocerás la gestión y promoción del turismo, a través de la aplicación de procesos administrativos efectivos y de calidad, para  la satisfacción del cliente; además del desarrollo de habilidades técnicas gastronómicas, regidas por estándares de calidad internacional.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Administrando empresas en la industria de alimentos y bebidas, gestor y promotor de la actividad turística y la cultura gastronómica nacional. Desarrollando alta cocina; en secretarías de gobierno diseñando proyectos turísticos sustentables o gestionando tu propia empresa.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/lgtyg/licenciatura_turismo_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/lgtyg/licenciatura_turismo_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lgtyg/licenciatura_turismo_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lgtyg/licenciatura_turismo_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -495,15 +495,15 @@
         ]
     },
     "isdi": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/isdi/licenciatura_sistemas_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/isdi/licenciatura_sistemas_1.jpg",
         "titulo1": "Ingeniería en Sistemas Digitales Interactivos",
         "desc1": "Entenderás los fundamentos de los sistemas digitales, los procesos y herramientas de desarrollo de software y el diseño de sistemas electrónicos, aplicando elementos digitales, como lo son: sensores, actuadores, interfaces de usuario, micro controladores, sistemas de información, entre otros.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Gestionando tu propia empresa, ofreciendo servicios de asesoría, automatización y desarrollo de tecnologías. En empresas de desarrollo de software, instituciones educativas, empresas orientadas al desarrollo de tecnologías computacionales, procesos industriales, y/o participando en centros de investigación.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/isdi/licenciatura_sistemas_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/isdi/licenciatura_sistemas_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/isdi/licenciatura_sistemas_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/isdi/licenciatura_sistemas_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -711,15 +711,15 @@
         ]
     },
     "lnut": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/lnut/licenciatura_nutricion_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lnut/licenciatura_nutricion_1.jpg",
         "titulo1": "Licenciatura en Nutrición",
         "desc1": "Obtendrás conocimientos sobre la interacción de los alimentos con el organismo humano y su actuación en los procesos de salud y enfermedad. Comprenderás las implicaciones sociales, psicológicas y culturales inmersas en la ciencia de la nutrición. Formularás, elaborarás e innovarás, diversos productos alimenticios, todo ello en un marco de respeto y ética profesional, atendiendo las normas oficiales de carácter nacional e internacional vigentes.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Podrás integrarte a equipos de trabajo multidisciplinarios dentro del área clínica y hospitalaria, dedicados a la contribución de la calidad de vida de las personas, desarrollarás planes de intervención nutricional para centros deportivos y educativos. Aportarás valor como asesor en empresas de tipo público y privado, o creando tu consultorio propio. Socialmente podrás participar en actividades de prevención, diagnóstico y apoyo nutricional, con el objetivo de preservar la salud, además de contribuir al desarrollo de las ciencias médicas a través de la investigación.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/lnut/licenciatura_nutricion_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/lnut/licenciatura_nutricion_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lnut/licenciatura_nutricion_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lnut/licenciatura_nutricion_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -935,15 +935,15 @@
         ]
     },
     "ltal": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/ltal/licenciatura_audicion_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ltal/licenciatura_audicion_1.jpg",
         "titulo1": "Licenciatura en Terapia de Audición y Lenguaje",
         "desc1": "Conocerás y diagnosticarás los trastornos de Audición y Lenguaje; atenderás a pacientes de todas las edades que presenten dificultades, tanto en  el desarrollo  del lenguaje y/o la comunicación, como en proporcionar terapia, tratamiento o reeducación en los posibles trastornos que aparecen en el área de la comunicación humana.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Como especialista en rehabilitación de los trastornos de la audición, lenguaje y comunicación, en centros hospitalarios y de rehabilitación, en el ámbito educativo y empresarial; así como en el ejercicio de la práctica privada.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/ltal/licenciatura_audicion_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/ltal/licenciatura_audicion_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ltal/licenciatura_audicion_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ltal/licenciatura_audicion_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -1156,15 +1156,15 @@
         ]
     },
     "ltfyr": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/ltfyr/licenciatura_terapia_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ltfyr/licenciatura_terapia_1.jpg",
         "titulo1": "Licenciatura en Terapia Física y Rehabilitación",
         "desc1": "Dominarás los conocimientos científicos del área de la salud, medicina de rehabilitación y terapia física; cuyo propósito principal es prevenir, desarrollar, mantener y restaurar el máximo movimiento y capacidad funcional del ser humano; a través de medios físico-terapéuticos, ejercicios y técnicas específicas de rehabilitación.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Integrándote a equipos de trabajo multidisciplinarios en hospitales y clínicas públicas y/o privadas. Como profesional independiente de la práctica clínica privada. En centros educativos y de investigación, clubes deportivos y centro de atención especializados.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/ltfyr/licenciatura_terapia_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/ltfyr/licenciatura_terapia_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ltfyr/licenciatura_terapia_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ltfyr/licenciatura_terapia_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -1377,15 +1377,15 @@
         ]
     },
     "lgas": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/lgas/licenciatura_gastronomia_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lgas/licenciatura_gastronomia_1.jpg",
         "titulo1": "Licenciatura en Gastronomía",
         "desc1": "Tendrás la oportunidad de desarrollar tus habilidades culinarias y administrativas, y al mismo tiempo compartir experiencias, sabores y culturas. Aplicarás técnicas y métodos vanguardistas en la realización de los procesos de producción de los distintos alimentos y bebidas; además de realizar prácticas profesionales de alto impacto,  comunicándote a través de los idiomas inglés y francés.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "En la administración de alimentos y bebidas en restaurantes, hoteles de alto prestigio, cruceros, comedores industriales, cadenas de restaurantes, banquetes, asesoría culinaria, diseños de menú en restaurantes, bares y hasta dirigir un restaurante propio o de alta hotelería, regido por estándares de calidad internacionales.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/lgas/licenciatura_gastronomia_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/lgas/licenciatura_gastronomia_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lgas/licenciatura_gastronomia_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lgas/licenciatura_gastronomia_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -1596,15 +1596,15 @@
         ]
     },
     "ldvm": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/ldvm/licenciatura_mercadotecnia_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ldvm/licenciatura_mercadotecnia_1.jpg",
         "titulo1": "Licenciatura en Dirección de Ventas y Marketing",
         "desc1": "Desarrollarás habilidades de ventas, marketing, investigación de mercados, campañas publicitarias, comercio electrónico y relaciones públicas; además, de realizar prácticas profesionales de alto nivel en empresas, comunicándote en los idiomas inglés y chino mandarín.",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "Liderando las ventas en mercados altamente competitivos, diseñando y ejecutando estrategias comerciales en los equipos de venta y relaciones públicas, identificando clientes potenciales para mejorar la situación de las empresas privadas, públicas o de tu propia empresa.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/ldvm/licenciatura_mercadotecnia_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/ldvm/licenciatura_mercadotecnia_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ldvm/licenciatura_mercadotecnia_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/ldvm/licenciatura_mercadotecnia_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [
@@ -1815,15 +1815,15 @@
         ]
     },
     "isc": {
-        "urlImg1": "assets/images/oferta-educativa/licenciaturas/isc/licenciatura_isc_1.jpg",
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/isc/licenciatura_isc_1.jpg",
         "titulo1": "Ingeniería en Sistemas Computacionales",
         "desc1": "Si buscas estar a la vanguardia en los cambios tecnológicos, te apasiona el desarrollo de software para dar soluciones innovadoras, te motivan los retos lógico-matemáticos, y tienes un talento creativo digital, ¡Esta carrera es para ti!",
         "titulo2": "Campo Profesional",
         "subTitulo2": "",
         "desc2": "En instituciones del sector público y/o privado, y en el sector industrial, en el área de sistemas, como líder, auditor de sistemas o de proyectos de desarrollo de software. Puedes optar por la docencia y/o incorporarte a proyectos de investigación, o desarrollarte como responsable de departamentos de Tecnologías de Información.",
         "lista2": [],
-        "urlImg2": "assets/images/oferta-educativa/licenciaturas/isc/licenciatura_isc_2.jpg",
-        "urlImg3": "assets/images/oferta-educativa/licenciaturas/isc/licenciatura_isc_3.jpg",
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/isc/licenciatura_isc_2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/isc/licenciatura_isc_3.jpg",
         "titulo3": "Perfil de Ingreso",
         "desc3": "",
         "lista3": [

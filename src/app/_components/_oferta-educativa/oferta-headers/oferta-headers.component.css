@@ -1,7 +1,7 @@
 .programas-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 16px 16px 0 16px;
+    padding: 16px;
 }
 
 .pos-active {
@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 900px) {
     .programas-wrapper {
-        padding: 60px 60px 0 60px;
+        padding: 60px;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;

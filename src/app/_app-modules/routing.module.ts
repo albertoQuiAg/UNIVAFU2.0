@@ -6,7 +6,7 @@ const routes: Routes = [
     { path: '', loadChildren: 'src/app/_components/home/home.module#HomeModule' },
     { path: 'univafu', loadChildren: 'src/app/_components/univafu/univafu.module#UnivafuModule' },
     { path: 'oferta-educativa/licenciaturas', loadChildren: 'src/app/_components/_oferta-educativa/oferta-headers/oferta-headers.module#OfertaHeadersModule' },
-    { path: 'oferta-educativa/posgrados', loadChildren: 'src/app/_components/_oferta-educativa/oferta-headers/oferta-headers.module#OfertaHeadersModule' },
+    { path: 'oferta-educativa/posgrados', loadChildren: 'src/app/_components/_oferta-educativa/oferta-headers/posgrados.module#PosgradosModule' },
     { path: 'oferta-educativa/educacion-continua', loadChildren: 'src/app/_components/_oferta-educativa/educacion-continua/educacion-continua.module#EducacionContinuaModule' },
     { path: 'red-univafu/fundacion', loadChildren: 'src/app/_components/_red-univafu/fundacion/fundacion.module#FundacionModule' },
     { path: 'red-univafu/iiu', loadChildren: 'src/app/_components/_red-univafu/iiu/iiu.module#IiuModule' },

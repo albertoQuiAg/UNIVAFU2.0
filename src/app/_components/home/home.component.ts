@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   resizeSub: Subscription;
 
   constructor(
-    private _uvfService: UvfService,
+    public _uvfService: UvfService,
     private dialog: MatDialog,
     private render: Renderer2) { }
 
