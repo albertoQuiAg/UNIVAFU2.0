@@ -42,6 +42,10 @@
         {
             "label": "Licenciatura en Dirección de Ventas y Marketing",
             "url": "ldvm"
+        },
+        {
+            "label": "Licenciatura en Marketing Digital",
+            "url": "lmkt"
         }
     ],
     "lcfd": {
@@ -2031,6 +2035,222 @@
                     },
                     {
                         "titulo": "Desarrollo de Emprendedores"
+                    }
+                ]
+            }
+        ]
+    },
+    "lmkt": {
+        "urlImg1": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lmkt/1.jpg",
+        "titulo1": "Licenciatura en Marketing Digital",
+        "desc1": "Si tienes interés en la publicidad, te apasionan las redes sociales e internet, quieres orientar tus habilidades y destrezas al diseño de estrategias de comercialización en medios digitales que mejoren el alcance de una empresa, ¡Esta carrera es para ti!.",
+        "titulo2": "Campo Profesional",
+        "subTitulo2": "",
+        "desc2": "Gestionando tu propia empresa, ofreciendo servicios de asesorías como FreeLance, impulsando productos y marcas. En empresas que requieran desarrollar sus campañas publicitarias en medios digitales o potencializar su alcance en el ciberespacio.",
+        "lista2": [],
+        "urlImg2": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lmkt/2.jpg",
+        "urlImg3": "http://univafu.edu.mx/assetsWebsite/images/oferta-educativa/licenciaturas/lmkt/3.jpg",
+        "titulo3": "Perfil de Ingreso",
+        "desc3": "",
+        "lista3": [
+            {
+                "line": "Interés por los fundamentos de marketing"
+            },
+            {
+                "line": "Gusto por las herramientas para el diseño digital"
+            },
+            {
+                "line": "Habilidades para el traslado de la comercialización a medios digitales, administración y legalidad en marketing"
+            },
+            {
+                "line": "Facilidad para la gestión de redes sociales y  comercio electrónico"
+            }
+        ],
+        "semestres": [
+            {
+                "titulo": "1er Semestre",
+                "materias": [
+                    {
+                        "titulo": "Comunicación Visual"
+                    },
+                    {
+                        "titulo": "Taller de Creatividad"
+                    },
+                    {
+                        "titulo": "Fundamentos de Marketing"
+                    },
+                    {
+                        "titulo": "Administración"
+                    },
+                    {
+                        "titulo": "Matemáticas Orientadas a los Negocios"
+                    },
+                    {
+                        "titulo": "Taller de Expresión Oral y Escrita"
+                    },
+                    {
+                        "titulo": "Valores Humanos"
+                    },
+                    {
+                        "titulo": "Inglés I"
+                    }
+                ]
+            },
+            {
+                "titulo": "2do Semestre",
+                "materias": [
+                    {
+                        "titulo": "Tratamiento de Imágenes"
+                    },
+                    {
+                        "titulo": "Psicología del Color"
+                    },
+                    {
+                        "titulo": "Marketing de Servicios"
+                    },
+                    {
+                        "titulo": "Comportamiento del Consumidor"
+                    },
+                    {
+                        "titulo": "Análisis de la Información"
+                    },
+                    {
+                        "titulo": "Estadística Aplicada"
+                    },
+                    {
+                        "titulo": "Inglés II"
+                    }
+                ]
+            },
+            {
+                "titulo": "3er Semestre",
+                "materias": [
+                    {
+                        "titulo": "Diseño Digital Publicitario"
+                    },
+                    {
+                        "titulo": "Introducción al Diseño Web"
+                    },
+                    {
+                        "titulo": "Marketing Mix"
+                    },
+                    {
+                        "titulo": "Publicidad y Comunicación"
+                    },
+                    {
+                        "titulo": "Contabilidad"
+                    },
+                    {
+                        "titulo": "Metodología de la Investigación"
+                    },
+                    {
+                        "titulo": "Inglés III"
+                    }
+                ]
+            },
+            {
+                "titulo": "4to Semestre",
+                "materias": [
+                    {
+                        "titulo": "Audio y Video Digital"
+                    },
+                    {
+                        "titulo": "Administración Web"
+                    },
+                    {
+                        "titulo": "Marketing Estratégico"
+                    },
+                    {
+                        "titulo": "Investigación de Mercados"
+                    },
+                    {
+                        "titulo": "Derecho Corporativo"
+                    },
+                    {
+                        "titulo": "Desarrollo Sustentable"
+                    },
+                    {
+                        "titulo": "Inglés IV"
+                    }
+                ]
+            },
+            {
+                "titulo": "5to Semestre",
+                "materias": [
+                    {
+                        "titulo": "Social Media"
+                    },
+                    {
+                        "titulo": "Aplicaciones Web"
+                    },
+                    {
+                        "titulo": "Neuromarketing"
+                    },
+                    {
+                        "titulo": "Imagen Corporativa"
+                    },
+                    {
+                        "titulo": "Régimen Legal del Marketing"
+                    },
+                    {
+                        "titulo": "Liderazgo"
+                    },
+                    {
+                        "titulo": "Ética"
+                    }
+                ]
+            },
+            {
+                "titulo": "6to Semestre",
+                "materias": [
+                    {
+                        "titulo": "Redacción en Medios Digitales"
+                    },
+                    {
+                        "titulo": "Marketing Móvil"
+                    },
+                    {
+                        "titulo": "Marketing Digital"
+                    },
+                    {
+                        "titulo": "Campañas Publicitarias I"
+                    },
+                    {
+                        "titulo": "Gestión de Ventas"
+                    },
+                    {
+                        "titulo": "Desarrollo de Emprendedores"
+                    }
+                ]
+            },
+            {
+                "titulo": "7mo Semestre",
+                "materias": [
+                    {
+                        "titulo": "Cloud Design"
+                    },
+                    {
+                        "titulo": "E-Commerce"
+                    },
+                    {
+                        "titulo": "Marketing Trends & Topics"
+                    },
+                    {
+                        "titulo": "Campañas Publicitarias II"
+                    },
+                    {
+                        "titulo": "Development of Management Skills"
+                    },
+                    {
+                        "titulo": "Seminario de Trabajo de Investigación"
+                    }
+                ]
+            },
+            {
+                "titulo": "8vo Semestre",
+                "materias": [
+                    {
+                        "titulo": "Estadía Empresarial"
                     }
                 ]
             }

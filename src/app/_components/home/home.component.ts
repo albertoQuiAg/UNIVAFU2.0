@@ -4,6 +4,7 @@ import { take, map, filter } from '../../../../node_modules/rxjs/operators';
 import { MatDialog } from '../../../../node_modules/@angular/material';
 import { NoticiasDialogComponent } from '../_dialogs/noticias-dialog/noticias-dialog.component';
 import { Subscription, fromEvent } from '../../../../node_modules/rxjs';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     public _uvfService: UvfService,
     private dialog: MatDialog,
-    private render: Renderer2) { }
+    private render: Renderer2,
+    public _router: Router) { }
 
   ngOnInit() {
     this.loadNoticias();

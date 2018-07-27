@@ -25,10 +25,6 @@
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
-.social-buttons:hover {
-    transform: scale(1.4)
-}
-
 .fb-button-blue {
     background-image: url('http://univafu.edu.mx/assetsWebsite/icons/FB_Azul.png');
 }
@@ -133,10 +129,6 @@
     margin-top: 16px;
 }
 
-.aviso-privacidad:hover {
-    text-decoration: underline;
-}
-
 @media only screen and (min-width: 700px) { 
     .wrapper-info {
         flex-direction: row;
@@ -194,4 +186,13 @@
     .vnr-wrapper > h1 {
         font-size: 3em;
     }
+
+    .social-buttons:hover {
+        transform: scale(1.4)
+    }
+
+    .aviso-privacidad:hover {
+        text-decoration: underline;
+    }
+    
 }

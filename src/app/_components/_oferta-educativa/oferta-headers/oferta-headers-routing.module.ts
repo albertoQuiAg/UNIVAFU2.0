@@ -15,6 +15,7 @@ const routes: Routes = [
       { path: 'lgas', loadChildren: 'src/app/_components/_oferta-educativa/programas/programas.module#ProgramasModule' },
       { path: 'ldvm', loadChildren: 'src/app/_components/_oferta-educativa/programas/programas.module#ProgramasModule' },
       { path: 'isc', loadChildren: 'src/app/_components/_oferta-educativa/programas/programas.module#ProgramasModule' },
+      { path: 'lmkt', loadChildren: 'src/app/_components/_oferta-educativa/programas/programas.module#ProgramasModule' },
       // { path: '', redirectTo: "lcfd", pathMatch: 'full' }
     ]
   }

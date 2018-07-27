@@ -116,6 +116,10 @@ export class RouteGuardService implements CanActivate, CanActivateChild {
         this._uvfService.setProgramasData(this._uvfService.licenciaturasData.isc);
         break;
       }
+      case "lmkt": {
+        this._uvfService.setProgramasData(this._uvfService.licenciaturasData.lmkt);
+        break;
+      }
     }
   }
 
