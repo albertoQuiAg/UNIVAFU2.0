@@ -10,8 +10,8 @@
     </div>
   </div>
   <div class="programas-item">
-    <div class="programas-info">
-      <div>
+    <div class="programas-info" [class.programas-info-over]="_uvfService.programasData.over">
+      <div [class.programas-info-over-item]="_uvfService.programasData.over">
         <div class="line programas-line"></div>
         <h1>{{_uvfService.programasData.titulo2}}</h1>
         <h2>{{_uvfService.programasData.subTitulo2}}</h2>
@@ -23,11 +23,11 @@
         </ul>
       </div>
     </div>
-    <div *ngIf="_uvfService.programasData.urlImg2" [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg2+')'}"
+    <div [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg2+')'}"
       class="programas-item programas-img-opts"></div>
   </div>
   <div class="programas-item programas-reverse">
-    <div *ngIf="_uvfService.programasData.urlImg3" [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg3+')'}"
+    <div [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg3+')'}"
       class="programas-item programas-img-opts"></div>
     <div class="programas-info">
       <div>

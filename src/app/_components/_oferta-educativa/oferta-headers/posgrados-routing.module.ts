@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: '', component: OfertaHeadersComponent, canActivate: [RouteGuardService], canActivateChild: [RouteGuardService], children: [
       { path: 'mmed', loadChildren: 'src/app/_components/_oferta-educativa/programas/programas.module#ProgramasModule' },
+      { path: 'medu', loadChildren: 'src/app/_components/_oferta-educativa/programas/programas.module#ProgramasModule' },
       // { path: '', redirectTo: "lcfd", pathMatch: 'full' }
     ]
   }
