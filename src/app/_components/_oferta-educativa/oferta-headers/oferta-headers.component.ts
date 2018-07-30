@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { UvfService } from '../../../_services/uvf.service';
 
 
@@ -9,6 +9,8 @@ import { UvfService } from '../../../_services/uvf.service';
 })
 export class OfertaHeadersComponent implements OnInit, OnDestroy {
 
+  @ViewChild('smooth') smooth: ElementRef;
+
   constructor(public _uvfService: UvfService) { }
 
   ngOnInit() {
@@ -17,6 +19,10 @@ export class OfertaHeadersComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this._uvfService.setOEInkBarActive(false);
+  }
+
+  onPrograma() {
+    this.smooth.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
   }
 
 }

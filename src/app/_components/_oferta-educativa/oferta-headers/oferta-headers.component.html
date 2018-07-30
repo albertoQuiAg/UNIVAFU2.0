@@ -10,15 +10,18 @@
 <div class="programas-wrapper">
   <div class="pro-box1">
     <div class="line pro-line"></div>
-    <h1>{{_uvfService.headers?.title2}}<br *ngIf="_uvfService.mobileQuery.matches">{{_uvfService.headers?.title3}}</h1>
+    <h1>{{_uvfService.headers?.title2}}
+      <br *ngIf="_uvfService.mobileQuery.matches">{{_uvfService.headers?.title3}}</h1>
   </div>
   <div class="pro-box2">
     <mat-nav-list>
-      <a mat-list-item *ngFor="let programa of _uvfService.links" [routerLink]="programa.url" routerLinkActive="pos-active">
+      <a mat-list-item *ngFor="let programa of _uvfService.links" [routerLink]="programa.url" routerLinkActive="pos-active" (click)="onPrograma()">
         <mat-icon>arrow_forward</mat-icon> {{programa.label}}
       </a>
     </mat-nav-list>
   </div>
+
+  <div #smooth class="smooth-element"></div>
 </div>
 
 <router-outlet></router-outlet>

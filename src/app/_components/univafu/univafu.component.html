@@ -8,23 +8,23 @@
   </div>
 </div>
 
-<div class="wrapper-mvp">
+<div class="wrapper-mvp" #mvp>
   <div class="mvp-box1">
     <img *ngIf="_uvfService.mobileQuery.matches" src="http://univafu.edu.mx/assetsWebsite/images/univafu/univafu.jpg" alt="UNIVAU">
   </div>
   <div class="mvp-box2 uvf-mvp">
     <div class="uvf-mvp-box">
-      <div class="line mvp-line"></div>
+      <div class="line mvp-line" [@barAnimation]="animationState"></div>
       <h2>MISIÓN</h2>
       <p>Construimos aprendizajes mediante la transformación de la experiencia.</p>
     </div>
     <div class="uvf-mvp-box">
-      <div class="line mvp-line"></div>
+      <div class="line mvp-line" [@barAnimation]="animationState"></div>
       <h2>VISIÓN</h2>
       <p>Ser fortaleza en la evolución del conocimiento.</p>
     </div>
     <div class="uvf-mvp-box">
-      <div class="line mvp-line"></div>
+      <div class="line mvp-line" [@barAnimation]="animationState"></div>
       <h2>PROPÓSITO</h2>
       <p>Crecemos juntos en tu proyecto de vida.</p>
     </div>

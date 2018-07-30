@@ -28,6 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
   routeSub: Subscription;
   navStartSub: Subscription;
   checkFlag: boolean = false;
+  progressBar: boolean = false;
 
   constructor(
     public _uvfService: UvfService,
@@ -78,15 +79,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.routeSub.unsubscribe();
+    this.navStartSub.unsubscribe();
     this._uvfService.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   setRouterEvents() {
-    // this.navStartSub = this.router.events.pipe(
-    //   filter(event => event instanceof NavigationStart)
-    // ).subscribe((event:any) => {
-    //   console.log(event);
-    // });
+    this.navStartSub = this.router.events.pipe(
+      filter(event => event instanceof NavigationStart)
+    ).subscribe(() => {
+      this.progressBar = true;
+    });
 
     this.routeSub = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -102,6 +104,7 @@ export class AppComponent implements OnInit, OnDestroy {
       }
 
       this.checkMenu();
+      this.progressBar = false;
     });
   }
 

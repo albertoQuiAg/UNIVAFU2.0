@@ -14,7 +14,8 @@ import {
     MatDialogModule,
     MatCheckboxModule,
     MatProgressSpinnerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressBarModule
 } from '@angular/material';
 import { LayoutModule } from '../../../node_modules/@angular/cdk/layout';
 import { FooterComponent } from '../_components/footer/footer.component';
@@ -46,6 +47,7 @@ import { RouterModule } from '../../../node_modules/@angular/router';
         MatCheckboxModule,
         LayoutModule,
         MatProgressSpinnerModule,
+        MatProgressBarModule,
         MatSidenavModule
     ],
     exports: [
@@ -66,6 +68,7 @@ import { RouterModule } from '../../../node_modules/@angular/router';
         MatCheckboxModule,
         LayoutModule,
         MatProgressSpinnerModule,
+        MatProgressBarModule,
         MatSidenavModule,
         FooterComponent,
         OfertaHeadersComponent

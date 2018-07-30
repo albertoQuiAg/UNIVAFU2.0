@@ -25,4 +25,8 @@
     .ec-mvp-box > p {
         font-size: 1em;
     }
+
+    .ec-desc > div {
+        padding-top: 50px;
+    }
  }

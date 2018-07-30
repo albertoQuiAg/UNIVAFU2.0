@@ -1,5 +1,5 @@
 <div class="programas-wrapper">
-  <div class="programas-item programas-reverse">
+  <div class="programas-item programas-reverse" [@leftAnimation]="secc1State" #secc1>
     <div [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg1+')'}" class="programas-img-opts"></div>
     <div class="programas-info">
       <div>
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <div class="programas-item">
+  <div class="programas-item" [@rightAnimation]="secc2State" #secc2>
     <div class="programas-info" [class.programas-info-over]="_uvfService.programasData.over">
       <div [class.programas-info-over-item]="_uvfService.programasData.over">
         <div class="line programas-line"></div>
@@ -26,7 +26,7 @@
     <div [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg2+')'}"
       class="programas-item programas-img-opts"></div>
   </div>
-  <div class="programas-item programas-reverse">
+  <div class="programas-item programas-reverse" [@leftAnimation]="secc3State" #secc3>
     <div [ngStyle]="{'background-image': 'url('+_uvfService.programasData.urlImg3+')'}"
       class="programas-item programas-img-opts"></div>
     <div class="programas-info">

@@ -1,20 +1,31 @@
-import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { UvfService } from 'src/app/_services/uvf.service';
 import { take, map, filter } from '../../../../node_modules/rxjs/operators';
 import { MatDialog } from '../../../../node_modules/@angular/material';
 import { NoticiasDialogComponent } from '../_dialogs/noticias-dialog/noticias-dialog.component';
 import { Subscription, fromEvent } from '../../../../node_modules/rxjs';
 import { Router } from '../../../../node_modules/@angular/router';
+import { staggerAnim } from '../../_animations/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [staggerAnim]
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
   noticias: any;
   resizeSub: Subscription;
+  scrollSub: Subscription;
+  public staggerStateIiu: string = "inactive";
+  public staggerStateFundacion: string = "inactive";
+  public staggerStateInnovagain: string = "inactive";
+  public staggerStateIridh: string = "inactive";
+  @ViewChild('iiu') public iiu: ElementRef;
+  @ViewChild('fundacion') public fundacion: ElementRef;
+  @ViewChild('innova') public innova: ElementRef;
+  @ViewChild('iridh') public iridh: ElementRef;
 
   constructor(
     public _uvfService: UvfService,
@@ -25,10 +36,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.loadNoticias();
     this.setResizeEvent();
+    this.setScrollEvent();
   }
 
   ngOnDestroy() {
     this.resizeSub.unsubscribe();
+    this.scrollSub.unsubscribe();
   }
 
   loadNoticias() {
@@ -112,6 +125,36 @@ export class HomeComponent implements OnInit, OnDestroy {
         }))
       ).subscribe((resize: any) => {
         this.dialog.closeAll();
+      });
+  }
+
+  setScrollEvent() {
+    this.scrollSub = fromEvent(window, 'scroll')
+      .pipe(
+        map((event: any) => ({
+          sT: event.target.scrollingElement.scrollTop
+        }))
+      ).subscribe((scroll: any) => {
+
+        let iiuElement: any = this.iiu.nativeElement.offsetTop - (document.querySelector('.mat-toolbar').scrollHeight * 5);
+        if (scroll.sT >= iiuElement) {
+          this.staggerStateIiu = 'active';
+        }
+
+        let fundacionElement: any = this.fundacion.nativeElement.offsetTop - (document.querySelector('.mat-toolbar').scrollHeight * 5);
+        if (scroll.sT >= fundacionElement) {
+          this.staggerStateFundacion = 'active';
+        }
+
+        let innovaElement: any = this.innova.nativeElement.offsetTop - (document.querySelector('.mat-toolbar').scrollHeight * 5);
+        if (scroll.sT >= innovaElement) {
+          this.staggerStateInnovagain = 'active';
+        }
+
+        let iridhElement: any = this.iridh.nativeElement.offsetTop - (document.querySelector('.mat-toolbar').scrollHeight * 5);
+        if (scroll.sT >= iridhElement) {
+          this.staggerStateIridh = 'active';
+        }
       });
   }
 

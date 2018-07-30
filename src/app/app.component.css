@@ -8,6 +8,11 @@ mat-nav-list {
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
+mat-progress-bar {
+    position: fixed;
+    z-index: 10000;
+}
+
 .wrapper-lvl2 {
     max-height: 0;
     overflow: hidden;

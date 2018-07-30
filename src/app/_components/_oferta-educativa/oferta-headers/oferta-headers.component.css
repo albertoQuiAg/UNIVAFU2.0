@@ -1,4 +1,5 @@
 .programas-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -6,6 +7,11 @@
 
 .pos-active {
     color: #d98a1b;
+}
+
+.smooth-element {
+    position: absolute;
+    bottom: 50px;
 }
 
 @media only screen and (min-width: 600px) {

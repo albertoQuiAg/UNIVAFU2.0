@@ -1,14 +1,16 @@
-import { Component, OnInit, OnDestroy, ViewChild, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, Renderer2, Output, EventEmitter } from '@angular/core';
 import { MatToolbar, MatDialog } from '../../../../node_modules/@angular/material';
 import { fromEvent, Subscription } from '../../../../node_modules/rxjs';
 import { map } from 'rxjs/operators';
 import { UvfService } from '../../_services/uvf.service';
 import { AlgebraixDialogComponent } from '../_dialogs/algebraix-dialog/algebraix-dialog.component';
+import { navArrowsAnimation } from '../../_animations/animations';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+  animations: [navArrowsAnimation]
 })
 export class NavbarComponent implements OnInit, OnDestroy {
 
@@ -17,8 +19,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   scrollSub: Subscription;
   scrollTop: number;
 
-  // @Output() public menuClosed: EventEmitter<void> = new EventEmitter<void>();
-  // @Output() public menuOpened: EventEmitter<void> = new EventEmitter<void>();
+  public naOEState: string = "inactive";
+  public naRedState: string = "inactive";
+
+  @Output() public menuClosed: EventEmitter<void> = new EventEmitter<void>();
+  @Output() public menuOpened: EventEmitter<void> = new EventEmitter<void>();
 
   public navLinks: any = [
     { "path": "", "label": "Inicio" },
@@ -63,20 +68,20 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.dialog.open(AlgebraixDialogComponent);
   }
 
-  // onOEMenuOpen(id: string) {
-  //   if (id === 'OE') {
-  //     this.naOEState = "active";
-  //   } else {
-  //     this.naRedState = "active"
-  //   }
-  // }
+  onMenuOpened(idMenu: string) {
+    if (idMenu == "oe") {
+      this.naOEState = 'active';
+    } else {
+      this.naRedState = 'active';
+    }
+  }
 
-  // onOEMenuClose(id: string) {
-  //   if (id === 'OE') {
-  //     this.naOEState = "inactive";
-  //   } else {
-  //     this.naRedState = "inactive";
-  //   }
-  // }
+  onMenuClosed(idMenu: string) {
+    if (idMenu == "oe") {
+      this.naOEState = 'inactive';
+    } else {
+      this.naRedState = 'inactive';
+    }
+  }
 
 }

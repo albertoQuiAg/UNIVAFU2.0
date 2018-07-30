@@ -83,23 +83,23 @@
 
   <div class="serv-flex-wrapper" #iiu>
     <div *ngIf="_uvfService.mobileQuery.matches" class="serv-iiu serv-img"></div>
-    <div class="serv-descs">
-      <img src="http://univafu.edu.mx/assetsWebsite/logos/iiu.png" alt="iiu instituto de idiomas UNIVAFU" class="serv-logo">
-      <p style="margin-top: 60px;">Somos un centro especializado en el aprendizaje de idiomas, abierto al público en general, en donde recibimos a toda
+    <div class="serv-descs" [@staggerAnim]="staggerStateIiu">
+      <img src="http://univafu.edu.mx/assetsWebsite/logos/iiu.png" alt="iiu instituto de idiomas UNIVAFU" class="serv-logo staggerItem">
+      <p style="margin-top: 60px;" class="staggerItem">Somos un centro especializado en el aprendizaje de idiomas, abierto al público en general, en donde recibimos a toda
         clase de alumnos interesados en aprender o actualizar sus conocimientos en una lengua extranjera.</p>
       <br>
-      <button mat-stroked-button class="white-stroked-button" (mouseenter)="onServsEnter(iiu)" (mouseleave)="onServsLeave(iiu)"
+      <button mat-stroked-button class="white-stroked-button staggerItem" (mouseenter)="onServsEnter(iiu)" (mouseleave)="onServsLeave(iiu)"
         (click)="_router.navigate(['/red-univafu/iiu'])">Más Información</button>
     </div>
   </div>
 
   <div class="serv-flex-wrapper" #fundacion>
-    <div class="serv-descs">
-      <img src="http://univafu.edu.mx/assetsWebsite/logos/fundacion.png" alt="Fundacion UNIVAFU" class="serv-logo">
-      <p style="margin-top: 30px;">UNIVAFU Universidad, para atender la función de asistencia social, crea: Fundación UNIVAFU A.C., con el lema
+    <div class="serv-descs" [@staggerAnim]="staggerStateFundacion">
+      <img src="http://univafu.edu.mx/assetsWebsite/logos/fundacion.png" alt="Fundacion UNIVAFU" class="serv-logo staggerItem">
+      <p style="margin-top: 30px;" class="staggerItem">UNIVAFU Universidad, para atender la función de asistencia social, crea: Fundación UNIVAFU A.C., con el lema
         <b>“Servir es una Misión Mágica”</b>.</p>
       <br>
-      <button mat-stroked-button class="white-stroked-button" (mouseenter)="onServsEnter(fundacion)" (mouseleave)="onServsLeave(fundacion)"
+      <button mat-stroked-button class="white-stroked-button staggerItem" (mouseenter)="onServsEnter(fundacion)" (mouseleave)="onServsLeave(fundacion)"
         (click)="_router.navigate(['/red-univafu/fundacion'])">Más Información</button>
     </div>
     <div *ngIf="_uvfService.mobileQuery.matches" class="serv-fundacion serv-img"></div>
@@ -107,23 +107,23 @@
 
   <div class="serv-flex-wrapper" #innova>
     <div *ngIf="_uvfService.mobileQuery.matches" class="serv-innovagain serv-img"></div>
-    <div class="serv-descs">
-      <img src="http://univafu.edu.mx/assetsWebsite/logos/innovagain.png" alt="Innovagain" class="serv-logo">
-      <p>Somos agencia de innovación y negocios, enfocada a la transferencia de conocimiento y comercialización de tecnologías,
+    <div class="serv-descs" [@staggerAnim]="staggerStateInnovagain">
+      <img src="http://univafu.edu.mx/assetsWebsite/logos/innovagain.png" alt="Innovagain" class="serv-logo staggerItem">
+      <p class="staggerItem">Somos agencia de innovación y negocios, enfocada a la transferencia de conocimiento y comercialización de tecnologías,
         que nace con la misión de fortalecer el ecosistema de innovación y emprendimiento de la región.</p>
       <br>
-      <button mat-stroked-button class="white-stroked-button" (mouseenter)="onServsEnter(innova)" (mouseleave)="onServsLeave(innova)"
+      <button mat-stroked-button class="white-stroked-button staggerItem" (mouseenter)="onServsEnter(innova)" (mouseleave)="onServsLeave(innova)"
         (click)="_router.navigate(['/red-univafu/innovagain'])">Más Información</button>
     </div>
   </div>
 
   <div class="serv-flex-wrapper" #iridh>
-    <div class="serv-descs">
-      <img src="http://univafu.edu.mx/assetsWebsite/logos/iridh.png" alt="IRIDH" class="serv-logo">
-      <p>Somos los agentes del cambio en la rehabilitación integral, adopción del cuidado de la salud y el bienestar físico
+    <div class="serv-descs" [@staggerAnim]="staggerStateIridh">
+      <img src="http://univafu.edu.mx/assetsWebsite/logos/iridh.png" alt="IRIDH" class="serv-logo staggerItem">
+      <p class="staggerItem">Somos los agentes del cambio en la rehabilitación integral, adopción del cuidado de la salud y el bienestar físico
         como un estilo de vida, a través de un equipo empático y con calidez humana. </p>
       <br>
-      <button mat-stroked-button class="white-stroked-button" (mouseenter)="onServsEnter(iridh)" (mouseleave)="onServsLeave(iridh)"
+      <button mat-stroked-button class="white-stroked-button staggerItem" (mouseenter)="onServsEnter(iridh)" (mouseleave)="onServsLeave(iridh)"
         (click)="_router.navigate(['/red-univafu/iridh'])">Más Información</button>
     </div>
     <div *ngIf="_uvfService.mobileQuery.matches" class="serv-iridh serv-img"></div>

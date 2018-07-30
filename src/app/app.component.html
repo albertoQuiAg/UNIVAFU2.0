@@ -51,6 +51,8 @@
 
     <mat-sidenav-content>
 
+        <mat-progress-bar *ngIf="progressBar" mode="indeterminate" color="accent"></mat-progress-bar>
+
         <app-navbar></app-navbar>
 
         <router-outlet></router-outlet>

@@ -16,23 +16,23 @@
   </div>
 </div>
 
-<div class="wrapper-mvp" style="padding-top: 0;">
+<div class="wrapper-mvp" style="padding-top: 0;" #animation>
   <div *ngIf="_uvfService.mobileQuery.matches" class="mvp-box1">
     <img src="http://univafu.edu.mx/assetsWebsite/images/red-univafu/iiu/idiomas_2.jpg" alt="FUNDACION" class="fundacion-ar-img">
   </div>
-  <div class="mvp-box2 iiu-mvp" #animation>
+  <div class="mvp-box2 iiu-mvp">
     <div class="iiu-mvp-box">
-      <div class="line mvp-line iiu-line"></div>
+      <div class="line mvp-line iiu-line" [@barAnimation]="animationState"></div>
       <h2>MISIÓN</h2>
       <p class="mvp-box2-desc">Privilegiar la comunicación internacional.</p>
     </div>
     <div class="iiu-mvp-box">
-      <div class="line mvp-line iiu-line"></div>
+      <div class="line mvp-line iiu-line" [@barAnimation]="animationState"></div>
       <h2>VISIÓN</h2>
       <p class="mvp-box2-desc">Posicionarnos en nuestro estado como el mejor instituto de comunicación humana global.</p>
     </div>
     <div class="iiu-mvp-box">
-      <div class="line mvp-line iiu-line"></div>
+      <div class="line mvp-line iiu-line" [@barAnimation]="animationState"></div>
       <h2>FILOSOFÍA</h2>
       <p class="mvp-box2-desc">Somos perseverantes para darle valor a la expresión humana.</p>
     </div>
@@ -78,20 +78,20 @@
 <div class="iiu-adicional">
   <div class="line abi-info-line iiu-line"></div>
   <h1 class="iiu-center-txt">BENEFICIOS ADICIONALES</h1>
-  <div class="iiu-beneficios" #toTop>
-    <div>
+  <div class="iiu-beneficios" #staggerElement>
+    <div [@staggerAnim]="staggerState">
       <ul>
         <li>
-          <p>Examen diagnóstico (sin costo).</p>
+          <p class="staggerItem">Examen diagnóstico (sin costo).</p>
         </li>
         <li>
-          <p>Material didáctico incluido.</p>
+          <p class="staggerItem">Material didáctico incluido.</p>
         </li>
         <li>
-          <p>Seguro contra accidentes.</p>
+          <p class="staggerItem">Seguro contra accidentes.</p>
         </li>
         <li>
-          <p>Desarrollo de actividades en aula tecnológica.</p>
+          <p class="staggerItem">Desarrollo de actividades en aula tecnológica.</p>
         </li>
       </ul>
     </div>

@@ -18,11 +18,11 @@
             {{link.label}}
         </a>
 
-        <a mat-tab-link [active]="_uvfService.OEInkBarActive" [matMenuTriggerFor]="OEMenu">Oferta Educativa
-            <mat-icon>expand_more</mat-icon>
+        <a mat-tab-link [active]="_uvfService.OEInkBarActive" [matMenuTriggerFor]="OEMenu" (menuOpened)="onMenuOpened('oe')" (menuClosed)="onMenuClosed('oe')">Oferta Educativa
+            <mat-icon [@animateNavArrows]="naOEState">expand_more</mat-icon>
         </a>
-        <a mat-tab-link [active]="_uvfService.RUInkBarActive" [matMenuTriggerFor]="RedMenu">Red UNIVAFU
-            <mat-icon>expand_more</mat-icon>
+        <a mat-tab-link [active]="_uvfService.RUInkBarActive" [matMenuTriggerFor]="RedMenu" (menuOpened)="onMenuOpened('ru')" (menuClosed)="onMenuClosed('ru')">Red UNIVAFU
+            <mat-icon [@animateNavArrows]="naRedState">expand_more</mat-icon>
         </a>
         <a mat-tab-link routerLink="contacto" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
             Contacto
