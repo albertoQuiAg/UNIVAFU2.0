@@ -5,11 +5,13 @@ import { AlgebraixDialogComponent } from './_components/_dialogs/algebraix-dialo
 import { Subscription } from '../../node_modules/rxjs';
 import { Router, NavigationEnd, NavigationStart } from '../../node_modules/@angular/router';
 import { filter } from '../../node_modules/rxjs/operators';
+import { routeAnimation } from './_animations/animations';
 
 @Component({
   selector: 'app-univafu',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [routeAnimation]
 })
 
 export class AppComponent implements OnInit, OnDestroy {
@@ -145,6 +147,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.sidenav.close().then(() => {
       this.dialog.open(AlgebraixDialogComponent);
     });
+  }
+
+  getDepth(outlet) {
+    return outlet.activatedRouteData['depth'];
   }
 
 }

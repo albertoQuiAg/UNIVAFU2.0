@@ -1,8 +1,8 @@
-import { trigger, transition, query, style, stagger, animate, state, keyframes } from '@angular/animations';
+import { trigger, transition, query, style, stagger, animate, state, keyframes, group } from '@angular/animations';
 
 export const staggerAnim = trigger('staggerAnim', [
     transition('inactive => active', [
-        style({opacity: 1}),
+        style({ opacity: 1 }),
         query('.staggerItem', style({ opacity: 0, transform: 'translateY(60px)' })),
         query('.staggerItem', stagger('300ms', [
             animate('600ms linear', style({ opacity: 1, transform: 'translateY(0)' }))
@@ -11,7 +11,7 @@ export const staggerAnim = trigger('staggerAnim', [
             animate(1, style('*'))
         ])
     ]),
-    state('inactive', style({opacity: 0}))
+    state('inactive', style({ opacity: 0 }))
 ]);
 
 export const barAnimation = trigger('barAnimation', [
@@ -26,7 +26,7 @@ export const barAnimation = trigger('barAnimation', [
             style({ opacity: 0, width: '0px', offset: 1 })
         ]))
     ]),
-    state('hide',   style({
+    state('hide', style({
         opacity: 0,
         width: '0px'
     })),
@@ -44,7 +44,7 @@ export const leftAnimation = trigger('leftAnimation', [
         opacity: 1,
         transform: "translateX(0)"
     })),
-    state('hide',   style({
+    state('hide', style({
         opacity: 0,
         transform: "translateX(60%)"
     })),
@@ -57,7 +57,7 @@ export const rightAnimation = trigger('rightAnimation', [
         opacity: 1,
         transform: "translateX(0)"
     })),
-    state('hide',   style({
+    state('hide', style({
         opacity: 0,
         transform: "translateX(-60%)"
     })),
@@ -75,3 +75,15 @@ export const navArrowsAnimation = trigger('animateNavArrows', [
     transition('* => active', animate('200ms')),
     transition('* => inactive', animate('200ms'))
 ]);
+
+export const routeAnimation = trigger('routeAnimation', [
+    transition('* => *', [
+        style({ height: "!" }),
+        query(':enter', style({ transform: 'translateX(100%)' }), {optional: true}),
+        query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), {optional: true}),
+        group([
+            query(':leave', [animate('0.4s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(-100%)' }))], {optional: true}),
+            query(':enter', [animate('0.4s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(0)' }))], {optional: true})
+        ])
+    ])
+]); 

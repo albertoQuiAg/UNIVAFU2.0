@@ -49,3 +49,11 @@ mat-progress-bar {
 .active {
     background-color: rgba(0,0,0,0.09);
 }
+
+.routeContainer {
+    position: relative;
+}
+
+.routeContainer > * {
+    display: block;
+}
