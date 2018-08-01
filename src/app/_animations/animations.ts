@@ -3,13 +3,21 @@ import { trigger, transition, query, style, stagger, animate, state, keyframes, 
 export const staggerAnim = trigger('staggerAnim', [
     transition('inactive => active', [
         style({ opacity: 1 }),
-        query('.staggerItem', style({ opacity: 0, transform: 'translateY(60px)' })),
-        query('.staggerItem', stagger('300ms', [
-            animate('600ms linear', style({ opacity: 1, transform: 'translateY(0)' }))
-        ])),
-        query('.staggerItem', [
-            animate(1, style('*'))
+        query('.staggerItem', style({ opacity: 0, transform: 'translateY(80px)' })),
+        group([
+            query('.staggerItem', [stagger('300ms', [
+                animate('600ms linear', style({ transform: 'translateY(0)' }))
+            ])]),
+            query('.staggerItem', [stagger('300ms', [
+                animate('1.2s linear', style({ opacity: 1 }))
+            ])])
         ])
+        // query('.staggerItem', stagger('300ms', [
+        //     animate('700ms linear', style({ opacity: 1, transform: 'translateY(0)' }))
+        // ])),
+        // query('.staggerItem', [
+        //     animate(1000, style('*'))
+        // ])
     ]),
     state('inactive', style({ opacity: 0 }))
 ]);
@@ -79,11 +87,11 @@ export const navArrowsAnimation = trigger('animateNavArrows', [
 export const routeAnimation = trigger('routeAnimation', [
     transition('* => *', [
         style({ height: "!" }),
-        query(':enter', style({ transform: 'translateX(100%)' }), {optional: true}),
-        query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), {optional: true}),
+        query(':enter', style({ transform: 'translateX(100%)' }), { optional: true }),
+        query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), { optional: true }),
         group([
-            query(':leave', [animate('0.4s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(-100%)' }))], {optional: true}),
-            query(':enter', [animate('0.4s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(0)' }))], {optional: true})
+            query(':leave', [animate('0.4s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(-100%)' }))], { optional: true }),
+            query(':enter', [animate('0.4s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(0)' }))], { optional: true })
         ])
     ])
 ]); 
